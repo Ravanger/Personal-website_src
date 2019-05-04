@@ -1,0 +1,52 @@
+
+.lightbox {
+  z-index: 200;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.lightbox img.zoomed-out {
+  height: auto;
+  max-height: 98vh;
+  width: auto;
+  max-width: 98vw;
+}
+
+.lightbox img.zoomed-in {
+  height: 100%;
+  width: 100%;
+}
+
+.lightbox button {
+  z-index: 3;
+  background: none;
+  padding: $half-space;
+  margin-left: $half-space;
+  margin-top: $half-space;
+  border: none;
+  color: #fff;
+  font-size: 2em;
+}
+
+.lightbox-hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.lightbox-visible {
+  display: block;
+  visibility: visible;
+}
