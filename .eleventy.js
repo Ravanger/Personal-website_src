@@ -1,7 +1,7 @@
-const pretty = require("pretty");
-const { DateTime } = require("luxon");
-
 module.exports = function (eleventyConfig) {
+    let pretty = require("pretty");
+    let { DateTime } = require("luxon");
+
     eleventyConfig.setDataDeepMerge(true);
 
     //Prettify html output
