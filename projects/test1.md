@@ -1,5 +1,5 @@
 ---
-pageTitle: This is my Title 2
+title: This is my Title 2
 ---
 This is a paragraph of text.
 

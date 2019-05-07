@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+title: Home
+tags: 
+    - pages
+permalink: /
+---
+
+<div class="projects">
+    {% for project in collections.projects %}
+        <pre>
+            <h2><a href="{{ project.url | url }}">{{ project.data.title }}</a></h2>
+            <em>{{ project.date | readableDate }}</em>
+            <em>{{ project.data.tags }}</em>
+        </pre>
+    {% endfor %}
+</div>

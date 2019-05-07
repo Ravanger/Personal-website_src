@@ -4,7 +4,6 @@
   "description": "My personal site",
   "dependencies": {
     "debug": "^4.1.1",
-    "html-minifier": "^4.0.0",
     "pretty": "^2.0.0"
   },
   "devDependencies": {

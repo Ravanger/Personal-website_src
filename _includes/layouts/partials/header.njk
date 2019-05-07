@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ settings.siteName }}</title>
+    </head>
+    <body>
+
+    <ul>
+        {% for pagefile in collections.pages %}
+            <li {% if pagefile.url == page.url %} class="active" {% endif %}><a href="{{ pagefile.url }}">{{ pagefile.data.title }}</a></li>
+        {% endfor %}
+    </ul>

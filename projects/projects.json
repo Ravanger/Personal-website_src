@@ -1,4 +1,4 @@
 {
     "tags": ["projects"],
-    "layout": "layouts/layout.liquid"
+    "layout": "layouts/base.njk"
 }
