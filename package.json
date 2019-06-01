@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "My personal site",
   "dependencies": {
+    "axios": "^0.19.0",
     "debug": "^4.1.1",
     "pretty": "^2.0.0"
   },
