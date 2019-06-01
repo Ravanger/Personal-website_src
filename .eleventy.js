@@ -1,11 +1,11 @@
-module.exports = function (eleventyConfig) {
+module.exports = eleventyConfig => {
     let pretty = require("pretty");
     let { DateTime } = require("luxon");
 
-    eleventyConfig.setDataDeepMerge(true);
+    eleventyConfig.setDataDeepMerge(true); //Merge directory and page tags
 
     //Prettify html output
-    eleventyConfig.addTransform("pretty", function (content, outputPath) {
+    eleventyConfig.addTransform("pretty", (content, outputPath) => {
         if (outputPath.endsWith(".html")) {
             return pretty(content);
         }
