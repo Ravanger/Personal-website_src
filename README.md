@@ -1,7 +1,7 @@
 # Ravanger.github.io (source)
 
 Source code for my personal website (https://www.borisr.dev)
----
+
 ## Requirements
 
 For development, you will need Node.js, 11ty, and a text editor.
