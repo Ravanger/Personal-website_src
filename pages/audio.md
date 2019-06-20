@@ -1,8 +1,5 @@
 ---
-layout: layouts/base.njk
 title: Audio
-tags: 
-    - pages
 ---
 
 <center><a href="https://soundcloud.com/ravanger/" target="_blank">soundcloud.com/ravanger</a></center>

@@ -1,8 +1,5 @@
 ---
-layout: layouts/base.njk
 title: Contact
-tags: 
-    - pages
 ---
 
 <center><a href="mailto:contact@BorisR.dev">contact@BorisR.dev</a></center>
