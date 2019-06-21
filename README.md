@@ -43,7 +43,7 @@ More info here:
 ## Install
 
     $ git clone https://github.com/Ravanger/Ravanger.github.io_src.git
-    $ cd Ravanger.github.io_src.git
+    $ cd Ravanger.github.io_src
     $ npm install
 
 ## Running the project
