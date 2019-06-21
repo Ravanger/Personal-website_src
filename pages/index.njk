@@ -2,8 +2,7 @@
 title: Home
 permalink: /
 ---
-
-<div class="projects">
+<div id="projectslist">
     {% for project in collections.projects %}
         <pre>
             <h2><a href="{{ project.url | url }}">{{ project.data.title }}</a></h2>

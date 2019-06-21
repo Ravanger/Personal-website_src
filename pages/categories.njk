@@ -1,0 +1,18 @@
+---
+title: Categories
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - pages
+    - projects
+  addAllPagesToCollections: true
+renderData:
+  title: Tagged “{{ tag }}”
+permalink: /Projects/{{ tag }}/
+---
+<h2>{{ tag }}</h2>
+
+{% set projectslist = collections[ tag ] %}
+{% include "layouts/partials/projectslist.njk" %}

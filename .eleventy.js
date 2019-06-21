@@ -1,10 +1,9 @@
 module.exports = eleventyConfig => {
-    let pretty = require("pretty");
-    let { DateTime } = require("luxon");
-
+    eleventyConfig.addCollection("tagList", require("./_includes/js/getTagList"));
     eleventyConfig.setDataDeepMerge(true); //Merge directory and page tags
 
     //Prettify html output
+    let pretty = require("pretty");
     eleventyConfig.addTransform("pretty", (content, outputPath) => {
         if (outputPath.endsWith(".html")) {
             return pretty(content);
@@ -14,7 +13,13 @@ module.exports = eleventyConfig => {
     });
 
     //Readable date
+    let { DateTime } = require("luxon");
     eleventyConfig.addFilter("readableDate", dateObj => {
-        return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
+        return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("LLLL dd, yyyy");
+    });
+
+    // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
+    eleventyConfig.addFilter("htmlDateString", dateObj => {
+        return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
     });
 };
