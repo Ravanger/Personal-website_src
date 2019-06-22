@@ -84,4 +84,7 @@ typings/
 .dynamodb/
 
 # Eleventy website build
-_site
+_site/
+
+# Images directory
+img/
