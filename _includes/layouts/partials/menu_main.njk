@@ -1,0 +1,5 @@
+<ul id="navmenu">
+    {% for pagefile in collections.pages %}
+        <li {% if pagefile.url == page.url %} class="active" {% endif %}><a href="{{ pagefile.url }}">{{ pagefile.data.title }}</a></li>
+    {% endfor %}
+</ul>

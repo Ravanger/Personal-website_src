@@ -1,6 +1,10 @@
-{% include "layouts/partials/header.njk" %}
+<!doctype html>
+<html lang="en">
+    {% include "layouts/partials/head.njk" %}
 
-<h1>{{ title }}</h1>
-{{ content | safe }}
-        
-{% include "layouts/partials/footer.njk" %}
+    <body>
+        {% include "layouts/partials/header_top.njk" %}
+        {% include "layouts/partials/body_content.njk" %}
+        {% include "layouts/partials/footer.njk" %}
+    </body>
+</html>
