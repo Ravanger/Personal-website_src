@@ -1,16 +1,28 @@
 {
   "name": "boris",
   "version": "1.0.0",
-  "description": "My personal site",
+  "description": "www.borisr.dev; My personal website",
   "dependencies": {
     "debug": "^4.1.1",
+    "imagemin": "^6.1.0",
+    "imagemin-giflossy": "^5.1.10",
+    "imagemin-jpegoptim": "^6.0.0",
+    "imagemin-pngquant": "^8.0.0",
     "pretty": "^2.0.0"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.8.3"
+    "@11ty/eleventy": "^0.8.3",
+    "imagemin-keep-folder": "^5.3.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf _site",
+    "build:eleventy": "eleventy",
+    "optimize_images": "node scripts/optimize_images.js",
+    "scripts": "npm run optimize_images",
+    "prebuild": "npm run clean",
+    "build": "npm run build:eleventy",
+    "postbuild": "npm run scripts",
+    "start": "eleventy --serve"
   },
   "author": "Boris Rossovsky",
   "license": "MIT"
