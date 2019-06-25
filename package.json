@@ -1,6 +1,5 @@
 {
   "name": "borisr.dev",
-  "version": "1.0.0",
   "description": "www.borisr.dev; My personal website",
   "dependencies": {
     "debug": "^4.1.1",
