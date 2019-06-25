@@ -11,7 +11,7 @@ For development, you will need Node.js, 11ty, and a text editor.
 ### Node.js
 - #### Node installation on Windows
 
-  Go to [official Node.js website](https://nodejs.org/) and download the installer.
+  Go to the [official Node.js website](https://nodejs.org/) and download the installer.
 
 - #### Node installation on Ubuntu
 
