@@ -1,10 +1,11 @@
 {
-  "name": "boris",
+  "name": "borisr.dev",
   "version": "1.0.0",
   "description": "www.borisr.dev; My personal website",
   "dependencies": {
     "debug": "^4.1.1",
     "imagemin": "^6.1.0",
+    "imagemin-keep-folder": "^5.3.2"
     "imagemin-giflossy": "^5.1.10",
     "imagemin-jpegoptim": "^6.0.0",
     "imagemin-pngquant": "^8.0.0",
@@ -12,7 +13,6 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.8.3",
-    "imagemin-keep-folder": "^5.3.2"
   },
   "scripts": {
     "clean": "rm -rf _site",
