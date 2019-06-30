@@ -4,7 +4,7 @@ module.exports = eleventyConfig => {
     eleventyConfig.setDataDeepMerge(true); //Merge directory and page tags
 
     //Readable date
-    let { DateTime } = require("luxon");
+    const { DateTime } = require("luxon");
     eleventyConfig.addFilter("readableDate", dateObj => {
         return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("LLLL dd, yyyy");
     });
@@ -17,7 +17,7 @@ module.exports = eleventyConfig => {
 
     //Prettify html output
     console.log("Prettifying html...");
-    let pretty = require("pretty");
+    const pretty = require("pretty");
     eleventyConfig.addTransform("pretty", (content, outputPath) => {
         if (outputPath.endsWith(".html")) {
             return pretty(content);
