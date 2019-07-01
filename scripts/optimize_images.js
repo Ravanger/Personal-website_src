@@ -39,25 +39,26 @@ mkdirSync(imagesOutputPath);
 console.log('Outputting to ' + imagesOutputPath);
 
 filesArray.forEach(currentImageInput => {
+	// Create empty dir for each image output
+	const currentImageOutputDir = path.join(
+		imagesOutputPath,
+		path.basename(path.dirname(currentImageInput))
+	); // ../_site/img/example_dir/
+	mkdirSync(currentImageOutputDir);
+
+	const currentImageOutput = path.join(
+		currentImageOutputDir,
+		path.basename(currentImageInput)
+	); // ../_site/img/example_dir/example.jpg
+	console.log(currentImageOutput);
+
 	const currentFileExt = path.extname(currentImageInput);
 	switch (currentFileExt) {
 		case '.jpg':
 		case '.png':
 			{
-				const currentImageOutputDir = path.join(
-					imagesOutputPath,
-					path.basename(path.dirname(currentImageInput))
-				); // ../_site/img/example_dir/
-				mkdirSync(currentImageOutputDir);
-
-				const currentImageOutput = path.join(
-					currentImageOutputDir,
-					path.basename(currentImageInput)
-				); // ../_site/img/example_dir/example.jpg
-
 				// Create empty placeholder file for each image
 				fs.openSync(currentImageOutput, 'wx');
-				console.log(currentImageOutput);
 
 				// Resize to maxWidth=800px if image is wider
 				sharp(currentImageInput)
@@ -73,23 +74,12 @@ filesArray.forEach(currentImageInput => {
 			break;
 		case '.gif':
 			{
-				const currentImageOutputDir = path.join(
-					imagesOutputPath,
-					path.basename(path.dirname(currentImageInput))
-				); // ../_site/img/example_dir/
-				mkdirSync(currentImageOutputDir);
-
-				const currentImageOutput = path.join(
-					currentImageOutputDir,
-					path.basename(currentImageInput)
-				); // ../_site/img/example_dir/example.gif
-				console.log(currentImageOutput);
-
 				// Create copy of gif before optimizations
 				fs.copyFileSync(currentImageInput, currentImageOutput);
 
 				const buf = fs.readFileSync(currentImageOutput);
 				const currentImageWidth = sizeOf(currentImageOutput).width;
+				if (currentImageWidth > 800) currentImageWidth = 800;
 				gifResize({
 					width: currentImageWidth,
 					optimizationLevel: 3
