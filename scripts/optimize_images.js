@@ -39,12 +39,10 @@ mkdirSync(imagesOutputPath);
 console.log('Outputting to ' + imagesOutputPath);
 
 filesArray.forEach(currentImageInput => {
-	// Create empty dir for each image output
 	const currentImageOutputDir = path.join(
 		imagesOutputPath,
 		path.basename(path.dirname(currentImageInput))
 	); // ../_site/img/example_dir/
-	mkdirSync(currentImageOutputDir);
 
 	const currentImageOutput = path.join(
 		currentImageOutputDir,
@@ -57,6 +55,8 @@ filesArray.forEach(currentImageInput => {
 		case '.jpg':
 		case '.png':
 			{
+				mkdirSync(currentImageOutputDir);
+
 				// Create empty placeholder file for each image
 				fs.openSync(currentImageOutput, 'wx');
 
@@ -74,6 +74,8 @@ filesArray.forEach(currentImageInput => {
 			break;
 		case '.gif':
 			{
+				mkdirSync(currentImageOutputDir);
+
 				// Create copy of gif before optimizations
 				fs.copyFileSync(currentImageInput, currentImageOutput);
 
