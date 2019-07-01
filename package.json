@@ -2,6 +2,8 @@
   "name": "borisr.dev",
   "description": "www.borisr.dev; My personal website",
   "dependencies": {
+    "@gumlet/gif-resize": "^1.0.4",
+    "image-size": "^0.7.4",
     "pretty": "^2.0.0",
     "sharp": "^0.22.1"
   },
