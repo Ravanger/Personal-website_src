@@ -89,3 +89,7 @@ _site/
 # Images directory
 img/
 img_bak/
+
+# Misc website files
+Colours
+Fonts
