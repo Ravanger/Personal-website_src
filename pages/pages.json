@@ -1,5 +1,4 @@
 {
-    "tags": ["pages"],
     "layout": "layouts/base.njk",
     "dynamicPermalink": "false",
     "permalink": "/{{ title }}/"

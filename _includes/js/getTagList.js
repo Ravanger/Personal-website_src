@@ -6,9 +6,11 @@ module.exports = collection => {
 
 			tags = tags.filter(item => {
 				switch (item) {
-					// this list should match the `filter` list in tags.njk
+					// this list should match the `filter` list in categories.njk
 					case 'pages':
 					case 'projects':
+					case 'all':
+					case 'tagList':
 						return false;
 				}
 
