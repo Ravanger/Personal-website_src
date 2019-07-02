@@ -2,7 +2,7 @@ const sharp = require('sharp');
 const gifResize = require('@gumlet/gif-resize');
 const path = require('path');
 const fs = require('fs');
-const sizeOf = require('image-size');
+const imageSize = require('image-size');
 
 const imagesInputPath = path.join(__dirname, '../img/');
 console.log('Optimizing images from ' + imagesInputPath);
@@ -80,7 +80,7 @@ filesArray.forEach(currentImageInput => {
 				fs.copyFileSync(currentImageInput, currentImageOutput);
 
 				const buf = fs.readFileSync(currentImageOutput);
-				const currentImageWidth = sizeOf(currentImageOutput).width;
+				const currentImageWidth = imageSize(currentImageOutput).width;
 				if (currentImageWidth > 800) currentImageWidth = 800;
 				gifResize({
 					width: currentImageWidth,
