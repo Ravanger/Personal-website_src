@@ -4,6 +4,7 @@
   "dependencies": {
     "@11ty/eleventy": "^0.8.3",
     "@gumlet/gif-resize": "^1.0.4",
+    "concurrently": "^4.1.1",
     "image-size": "^0.7.4",
     "less": "^3.9.0",
     "pretty": "^2.0.0",
@@ -15,13 +16,12 @@
   "scripts": {
     "clean": "rm -rf _site",
     "build:eleventy": "eleventy",
-    "build:css": "lessc style/style.less _site/Style/style.css",
-    "optimize_images": "node scripts/optimize_images.js",
-    "scripts": "npm run optimize_images",
+    "script:optimize_images": "node scripts/optimize_images.js",
+    "script:less-watch": "less-watch-compiler style _site/Style",
     "prebuild": "npm run clean",
-    "build": "npm run build:eleventy; npm run build:css",
-    "postbuild": "npm run scripts",
-    "start": "eleventy --serve"
+    "build": "npm run build:eleventy",
+    "postbuild": "npm run script:optimize_images",
+    "start": "concurrently \"eleventy --serve\" \"npm run script:less-watch\""
   },
   "author": "Boris Rossovsky",
   "license": "MIT"
