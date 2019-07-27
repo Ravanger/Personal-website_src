@@ -1,23 +1,25 @@
 <footer>
-    <ul>
-    {% if settings.twitterUser %}
-        <li class="inline"><a href="https://www.twitter.com/{{ settings.twitterUser }}" target="_blank">{{ settings.twitterUser }}</a></li>
-    {% endif %}
+    <nav class="centertext">
+        <ul>
+        {% if settings.twitterUser %}
+            <li class="inline"><a href="https://www.twitter.com/{{ settings.twitterUser }}" target="_blank">{{ settings.twitterUser }}</a></li>
+        {% endif %}
 
-    {% if settings.linkedinUser %}
-        <li class="inline"><a href="https://www.linkedin.com/in/{{ settings.linkedinUser }}" target="_blank">{{ settings.linkedinUser }}</a></li>
-    {% endif %}
+        {% if settings.linkedinUser %}
+            <li class="inline"><a href="https://www.linkedin.com/in/{{ settings.linkedinUser }}" target="_blank">{{ settings.linkedinUser }}</a></li>
+        {% endif %}
 
-    {% if settings.githubUser %}
-        <li class="inline"><a href="https://www.github.com/{{ settings.githubUser }}" target="_blank">{{ settings.githubUser }}</a></li>
-    {% endif %}
+        {% if settings.githubUser %}
+            <li class="inline"><a href="https://www.github.com/{{ settings.githubUser }}" target="_blank">{{ settings.githubUser }}</a></li>
+        {% endif %}
 
-    {% if settings.facebookUser %}
-        <li class="inline"><a href="https://www.facebook.com/{{ settings.facebookUser }}" target="_blank">{{ settings.facebookUser }}</a></li>
-    {% endif %}
+        {% if settings.facebookUser %}
+            <li class="inline"><a href="https://www.facebook.com/{{ settings.facebookUser }}" target="_blank">{{ settings.facebookUser }}</a></li>
+        {% endif %}
 
-    {% if settings.instagramUser %}
-        <li class="inline"><a href="https://www.instagram.com/{{ settings.instagramUser }}" target="_blank">{{ settings.instagramUser }}</a></li>
-    {% endif %}
-    </ul>
+        {% if settings.instagramUser %}
+            <li class="inline"><a href="https://www.instagram.com/{{ settings.instagramUser }}" target="_blank">{{ settings.instagramUser }}</a></li>
+        {% endif %}
+        </ul>
+    </nav>
 </footer>

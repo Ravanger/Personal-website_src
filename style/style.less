@@ -18,8 +18,11 @@
 
 body {
     color: @primarycolor;
-    background-color: lighten(@secondarycolor, 10%);
+    background-color: lighten(@secondarycolor, 12%);
     line-height: 1.15;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
     .bodytext();
 }
 
@@ -43,8 +46,7 @@ ul {
 
 #container > * {
     width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 .inline {
@@ -53,4 +55,12 @@ ul {
 
 .underline {
     border-bottom: 0.2em solid @linkcolour;
+}
+
+.underline-lighter {
+    border-bottom: 0.2em solid lighten(@linkcolour, 10%);
+}
+
+.margin-vertical {
+    margin: 2em 0;
 }
