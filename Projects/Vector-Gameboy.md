@@ -1,6 +1,7 @@
 ---
 title: Vector Recreation - Nintendo Gameboy
 tags: Graphic Design
+summary: My first try at vector art.
 ---
 
 My first try at vector art.

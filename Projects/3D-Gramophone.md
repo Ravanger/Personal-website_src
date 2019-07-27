@@ -1,6 +1,7 @@
 ---
 title: 3D - Gramophone
 tags: 3D Modeling
+summary: Tasked with modeling, texturing, lighting, and rendering a gramophone with "a modern twist."
 ---
 
 Tasked with modeling, texturing, lighting, and rendering a gramophone with "a modern twist."

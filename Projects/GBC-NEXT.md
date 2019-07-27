@@ -1,6 +1,7 @@
 ---
 title: NEXT (George Brown College)
 tags: Web Design and Development
+summary: Tasked with designing and developing a multi-user portfolio website for graduating students to showcase their work.
 ---
 <h4 style="text-align: center;"><a href="http://yearendshow.schoolofdesign.ca/" target="_blank">yearendshow.schoolofdesign.ca</a></h4>
 

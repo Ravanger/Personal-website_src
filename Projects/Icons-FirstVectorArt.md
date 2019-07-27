@@ -1,8 +1,8 @@
 ---
 title: Icons - First Vector Art
 tags: Graphic Design
+summary: Tasked by "Harold Bezingle" (my college instructor, Neil van der King) to create two sets of icons for two different demographics.
 ---
-
 My first venture into iconography.
 Tasked by "Harold Bezingle" (my college instructor, Neil van der King) to create two sets of icons for two different demographics.
 

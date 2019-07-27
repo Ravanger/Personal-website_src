@@ -1,6 +1,7 @@
 ---
 title: 3D - Steampunk Chess
 tags: 3D Modeling
+summary: Tasked with modeling, texturing, lighting, and rendering a steampunk chess set.
 ---
 
 Tasked with modeling, texturing, lighting, and rendering a steampunk chess set.

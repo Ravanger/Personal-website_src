@@ -1,6 +1,7 @@
 ---
 title: Ad - Orbital Ordnance
 tags: Graphic Design
+summary: Tasked with designing a brand for a mobile app, followed by a long-form image to advertise the app.
 ---
 
 Tasked with designing a brand for a mobile app, followed by a long-form image to advertise the app.

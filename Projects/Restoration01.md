@@ -1,6 +1,7 @@
 ---
 title: Restoration - Old Family Photo 1
 tags: Graphic Design
+summary: Restoration of an old family photograph for a client.
 ---
 
 Restoration of an old family photograph for a client.

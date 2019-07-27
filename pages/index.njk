@@ -8,5 +8,6 @@ layout: layouts/base_tags.njk
         <h1><a href="{{ project.url | url }}">{{ project.data.title }}</a></h1>
         <p><time datetime="{{ project.date | htmlDateString }}">Posted on {{ project.date | readableDate }}</time></p>
         <p>Categories: <em>{{ project.data.tags | filterAndLinkProjectsTag }}</em></p>
+        <p>{{ project.data.summary }}</p>
     </div>
 {% endfor %}

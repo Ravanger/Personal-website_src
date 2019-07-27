@@ -1,6 +1,7 @@
 ---
 title: Interactive Video - Myrtle's Murder
 tags: Video
+summary: Tasked with writing, directing, and producing a trailer for an interactive video game.
 ---
 
 Tasked with writing, directing, and producing a trailer for an interactive video game.
