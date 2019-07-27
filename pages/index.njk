@@ -1,13 +1,14 @@
 ---
 title: Projects
 permalink: /
+layout: layouts/base_tags.njk
 ---
 <div id="projectslist">
     {% for project in collections.projects %}
-        <pre>
-            <h2><a href="{{ project.url | url }}">{{ project.data.title }}</a></h2>
-            <em>{{ project.date | readableDate }}</em>
-            <em>{{ project.data.tags }}</em>
-        </pre>
+        <div>
+            <h1><a href="{{ project.url | url }}">{{ project.data.title }}</a></h1>
+            <p><time datetime="{{ project.date | htmlDateString }}">{{ project.date | readableDate }}</time></p>
+            <p>Categories: <em>{{ project.data.tags | filterAndLinkProjectsTag }}</em></p>
+        </div>
     {% endfor %}
 </div>

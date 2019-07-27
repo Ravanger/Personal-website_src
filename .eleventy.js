@@ -3,6 +3,25 @@ module.exports = eleventyConfig => {
     eleventyConfig.addCollection("tagList", require("./_includes/js/getTagList"));
     eleventyConfig.setDataDeepMerge(true); //Merge directory and page tags
 
+    //Filter out unnecessary tags
+    const filterProjectsTag = tags => {
+        var filteredTags = tags.filter(tag => { return tag !== 'projects' });
+        return filteredTags;
+    };
+
+    //Add links to tags
+    //TODO: fix
+    eleventyConfig.addFilter("filterAndLinkProjectsTag", tags => {
+        var linkedTags = filterProjectsTag(tags); //Remove "projects" tag
+        //Add link to each tag
+        linkedTags.filter(tag => {
+            return '<a href="/Projects/'+ tag + '/' + '">' + tag + '</a>';
+        });
+        console.log(linkedTags);
+        
+        return linkedTags;
+    });
+
     //Readable date
     const { DateTime } = require("luxon");
     eleventyConfig.addFilter("readableDate", dateObj => {
