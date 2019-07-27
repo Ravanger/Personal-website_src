@@ -2,23 +2,55 @@
 @secondarycolor : #E9E7D1;
 @greycolor      : #908D83;
 
+@linkcolour     : lighten(@primarycolor, 20%);
+
+.bodytext {
+    font-family: "Lato", sans-serif;
+}
+
+.headertext {
+    font-family: "Ruda", serif;
+}
+
+.centertext {
+    text-align: center;
+}
+
 body {
-    color: @greycolor;
-    background-color: @secondarycolor;
+    color: @primarycolor;
+    background-color: lighten(@secondarycolor, 10%);
+    line-height: 1.15;
+    .bodytext();
+}
+
+h1 {
+    .headertext();
+    font-size: 2em;
 }
 
 a {
-    color: @primarycolor;
+    color: @linkcolour;
     text-decoration: none;
     &:hover {
         color: @greycolor;
     }
 }
 
-.inline-block {
-    display: inline-block;
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+#container > * {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inline {
+    display: inline;
 }
 
 .underline {
-    text-decoration: underline;
+    border-bottom: 0.2em solid @linkcolour;
 }

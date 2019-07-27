@@ -3,11 +3,13 @@
     {% include "layouts/partials/head.njk" %}
 
     <body>
-        {% include "layouts/partials/header_top.njk" %}
-        <nav>
-            {% include "layouts/partials/menu_main.njk" %}
-        </nav>
-        {% include "layouts/partials/body_content.njk" %}
-        {% include "layouts/partials/footer.njk" %}
+        <div id="container">
+            {% include "layouts/partials/header_top.njk" %}
+            <nav class="centertext">
+                {% include "layouts/partials/menu_main.njk" %}
+            </nav>
+            {% include "layouts/partials/body_content.njk" %}
+            {% include "layouts/partials/footer.njk" %}
+        </div>
     </body>
 </html>
