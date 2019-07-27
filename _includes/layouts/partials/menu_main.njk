@@ -1,7 +1,7 @@
 <ul id="navmenu">
-    <li {% if page.url == "/" %} class="active" {% endif %}><a href="/">Projects</a></li>
+    <li class="inline-block"><a href="/" {% if page.url == "/" %} class="underline" {% endif %}>Projects</a></li>
     {% for pagefile in collections.pages | reverse %}
-        <li {% if pagefile.url == page.url %} class="active" {% endif %}><a href="{{ pagefile.url }}">{{ pagefile.data.title }}</a></li>
+        <li class="inline-block"><a href="{{ pagefile.url }}" {% if pagefile.url == page.url %} class="underline" {% endif %}>{{ pagefile.data.title }}</a></li>
     {% endfor %}
-    <li {% if page.url == "/Contact/" %} class="active" {% endif %}><a href="/Contact/">Contact</a></li>
+    <li class="inline-block"><a href="/Contact/" {% if page.url == "/Contact/" %} class="underline" {% endif %}>Contact</a></li>
 </ul>

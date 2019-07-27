@@ -1,6 +1,6 @@
 <ul id="tagsmenu">
     {% for tag in collections.tagList %}
         {% set tagUrl %}/Projects/{{ tag }}/{% endset %}
-        <li {% if tagUrl == page.url %} class="active" {% endif %}><a href="{{ tagUrl | url }}">{{ tag }}</a></li>
+        <li class="inline-block"><a href="{{ tagUrl | url }}" {% if tagUrl == page.url %} class="underline" {% endif %}>{{ tag }}</a></li>
     {% endfor %}
 </ul>

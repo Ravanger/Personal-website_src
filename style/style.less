@@ -3,5 +3,22 @@
 @greycolor      : #908D83;
 
 body {
-    background-color: @greycolor;
+    color: @greycolor;
+    background-color: @secondarycolor;
+}
+
+a {
+    color: @primarycolor;
+    text-decoration: none;
+    &:hover {
+        color: @greycolor;
+    }
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.underline {
+    text-decoration: underline;
 }
