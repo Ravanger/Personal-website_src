@@ -1,6 +1,0 @@
-<ul class="margin-vertical">
-    {% for tag in collections.tagList %}
-        {% set tagUrl %}/Projects/{{ tag }}/{% endset %}
-        <li class="inline"><a href="{{ tagUrl | url }}" {% if tagUrl == page.url %} class="underline" {% endif %}>{{ tag }}</a></li>
-    {% endfor %}
-</ul>

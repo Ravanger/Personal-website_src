@@ -1,5 +1,0 @@
-{
-    "layout": "layouts/base.njk",
-    "dynamicPermalink": "false",
-    "permalink": "/{{ title }}/"
-}
