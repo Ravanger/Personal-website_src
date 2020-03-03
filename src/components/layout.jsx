@@ -9,15 +9,9 @@ const GlobalStyles = createGlobalStyle`
   li {
     display: inline-block;
   }
-  ul {
+  ul, p, h1, h2 {
     margin: 0;
     padding: 0;
-  }
-  p {
-    margin: 0;
-  }
-  h2 {
-    margin: 0;
   }
 `
 const SiteWrapper = styled.div`
