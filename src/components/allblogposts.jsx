@@ -10,10 +10,12 @@ const AllBlogPosts = () => {
           node {
             id
             excerpt
+            timeToRead
             frontmatter {
               title
               path
-              date(formatString: "MMMM DD, YYYY")
+              date(formatString: "MMM DD, YYYY")
+              tags
             }
           }
         }
@@ -24,13 +26,20 @@ const AllBlogPosts = () => {
   return (
     <div className="allblogposts">
       {data.allMdx.edges.map(({ node: post }) => (
-        <Link to={post.frontmatter.path} key={post.id}>
-          <div className="blogpost">
+        <div className="blogpost" key={post.id}>
+          <Link to={post.frontmatter.path}>
+            <p>
+              {post.frontmatter.date} - {post.timeToRead} min read
+            </p>
+            <ul>
+              {post.frontmatter.tags.map((tag, index) => (
+                <li key={tag + index}>{tag}</li>
+              ))}
+            </ul>
             <h2>{post.frontmatter.title}</h2>
-            <h3>{post.frontmatter.date}</h3>
             <p>{post.excerpt}</p>
-          </div>
-        </Link>
+          </Link>
+        </div>
       ))}
     </div>
   )
