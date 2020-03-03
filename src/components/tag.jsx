@@ -37,16 +37,14 @@ const Tag = ({ pageContext, data }) => {
       <SEO title="Tag" />
       <div>
         <h1>{tagHeader}</h1>
-        <ul>
-          {edges.map(({ node }) => {
-            const { title, path } = node.frontmatter
-            return (
-              <li key={path}>
-                <Link to={path}>{title}</Link>
-              </li>
-            )
-          })}
-        </ul>
+        {edges.map(({ node }) => {
+          const { title, path } = node.frontmatter
+          return (
+            <div key={path}>
+              <Link to={path}>{title}</Link>
+            </div>
+          )
+        })}
         <Link to="/tags">All tags</Link>
       </div>
     </Layout>

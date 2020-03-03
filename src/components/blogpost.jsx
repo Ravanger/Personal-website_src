@@ -1,4 +1,5 @@
 import React from "react"
+import kebabCase from "lodash/kebabCase"
 
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
@@ -19,6 +20,13 @@ const PBlogPostExcerpt = styled.p`
   line-height: 1.5;
 `
 
+const LiTagItem = styled.li`
+  & + li::before {
+    margin: 0.2rem;
+    content: "-";
+  }
+`
+
 const BlogPost = ({ post }) => (
   <DivBlogPost>
     <Link to={post.frontmatter.path}>
@@ -27,7 +35,9 @@ const BlogPost = ({ post }) => (
       </p>
       <ul>
         {post.frontmatter.tags.map((tag, index) => (
-          <li key={tag + index}>{tag}</li>
+          <LiTagItem key={tag + index}>
+            <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+          </LiTagItem>
         ))}
       </ul>
       <H2BlogPostTitle>{post.frontmatter.title}</H2BlogPostTitle>

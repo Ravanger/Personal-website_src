@@ -14,6 +14,16 @@ const FooterWrapper = styled.footer`
   text-align: center;
 `
 
+const PFooterNotice = styled.p`
+  margin-bottom: 0.5rem;
+`
+
+const LiSocialsItem = styled.li`
+  & + li {
+    margin-left: 1rem;
+  }
+`
+
 const Footer = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -31,14 +41,14 @@ const Footer = () => {
 
   return (
     <FooterWrapper>
-      boris rossovsky {new Date().getFullYear()}
+      <PFooterNotice>boris rossovsky {new Date().getFullYear()}</PFooterNotice>
       <ul>
-        <li>
+        <LiSocialsItem>
           <a href={"mailto:" + data.site.siteMetadata.email}>
             <FaEnvelope />
           </a>
-        </li>
-        <li>
+        </LiSocialsItem>
+        <LiSocialsItem>
           <a
             href={data.site.siteMetadata.facebook}
             target="_blank"
@@ -46,8 +56,8 @@ const Footer = () => {
           >
             <FaFacebook />
           </a>
-        </li>
-        <li>
+        </LiSocialsItem>
+        <LiSocialsItem>
           <a
             href={data.site.siteMetadata.instagram}
             target="_blank"
@@ -55,8 +65,8 @@ const Footer = () => {
           >
             <FaInstagram />
           </a>
-        </li>
-        <li>
+        </LiSocialsItem>
+        <LiSocialsItem>
           <a
             href={data.site.siteMetadata.github}
             target="_blank"
@@ -64,8 +74,8 @@ const Footer = () => {
           >
             <FaGithub />
           </a>
-        </li>
-        <li>
+        </LiSocialsItem>
+        <LiSocialsItem>
           <a
             href={data.site.siteMetadata.linkedin}
             target="_blank"
@@ -73,7 +83,7 @@ const Footer = () => {
           >
             <FaLinkedin />
           </a>
-        </li>
+        </LiSocialsItem>
       </ul>
     </FooterWrapper>
   )

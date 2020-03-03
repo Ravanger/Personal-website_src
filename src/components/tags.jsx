@@ -8,6 +8,12 @@ const UlTagsList = styled.ul`
   text-align: center;
 `
 
+const LiTagItem = styled.li`
+  & + li {
+    margin-left: 2rem;
+  }
+`
+
 const Tags = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -24,11 +30,11 @@ const Tags = () => {
     <div className="tagslist">
       <UlTagsList>
         {data.allMdx.group.map(tag => (
-          <li key={tag.fieldValue}>
+          <LiTagItem key={tag.fieldValue}>
             <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
               {tag.fieldValue} ({tag.totalCount})
             </Link>
-          </li>
+          </LiTagItem>
         ))}
       </UlTagsList>
     </div>

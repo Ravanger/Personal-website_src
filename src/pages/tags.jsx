@@ -25,15 +25,13 @@ const Tags = () => {
         <SEO title="Tags" />
         <div>
           <h1>Tags</h1>
-          <ul>
-            {data.allMdx.group.map(tag => (
-              <li key={tag.fieldValue}>
-                <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                  {tag.fieldValue} ({tag.totalCount})
-                </Link>
-              </li>
-            ))}
-          </ul>
+          {data.allMdx.group.map(tag => (
+            <div key={tag.fieldValue}>
+              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                {tag.fieldValue} ({tag.totalCount})
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     </Layout>
