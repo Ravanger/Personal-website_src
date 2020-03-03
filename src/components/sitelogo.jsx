@@ -1,6 +1,17 @@
 import React from "react"
 
 import { Link, useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
+
+const H1LogoTitle = styled.h1`
+  font-size: 42px;
+  width: 6em;
+`
+
+const H2LogoSubtitle = styled.h2`
+  font-size: 15px;
+  font-weight: 100;
+`
 
 const SiteLogo = () => {
   const data = useStaticQuery(graphql`
@@ -17,8 +28,8 @@ const SiteLogo = () => {
   return (
     <div>
       <Link to="/">
-        <h1>{data.site.siteMetadata.title}</h1>
-        <h2>{data.site.siteMetadata.subtitle}</h2>
+        <H1LogoTitle>{data.site.siteMetadata.title}</H1LogoTitle>
+        <H2LogoSubtitle>{data.site.siteMetadata.subtitle}</H2LogoSubtitle>
       </Link>
     </div>
   )

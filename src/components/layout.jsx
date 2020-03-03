@@ -8,7 +8,10 @@ import Footer from "./footer"
 const GlobalStyles = createGlobalStyle`
   body {
         font-family: 'Roboto', sans-serif;
-      }
+  }
+  a {
+    text-decoration: none;
+  }
   li {
     display: inline-block;
   }
@@ -17,7 +20,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
 `
-const SiteWrapper = styled.div`
+const DivSiteWrapper = styled.div`
   margin: 0 auto;
   max-width: 960px;
   padding: 0 1rem 1.45rem;
@@ -27,11 +30,11 @@ const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyles />
-      <SiteWrapper>
+      <DivSiteWrapper>
         <Header />
         <main>{children}</main>
         <Footer />
-      </SiteWrapper>
+      </DivSiteWrapper>
     </>
   )
 }
