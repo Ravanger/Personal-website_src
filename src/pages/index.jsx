@@ -1,9 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Tags from "../components/tags"
 import AllBlogPosts from "../components/allblogposts"
 
 const Title = styled.h1`
@@ -14,8 +14,8 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" description="Home is where the house is" />
     <Title>Hi people</Title>
+    <Tags />
     <AllBlogPosts />
-    <Link to="/tags">Tags</Link>
   </Layout>
 )
 
