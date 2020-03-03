@@ -2,9 +2,25 @@ import React from "react"
 
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import styled from "styled-components"
+
+const DivBlogPost = styled.div`
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(90, 156, 136, 0.5);
+  margin: 1rem;
+`
+
+const H2BlogPostTitle = styled.h2`
+  font-size: 28px;
+`
+
+const PBlogPostExcerpt = styled.p`
+  line-height: 1.5;
+`
 
 const BlogPost = ({ post }) => (
-  <div className="blogpost">
+  <DivBlogPost>
     <Link to={post.frontmatter.path}>
       <p>
         {post.frontmatter.date} - {post.timeToRead} min read
@@ -14,10 +30,10 @@ const BlogPost = ({ post }) => (
           <li key={tag + index}>{tag}</li>
         ))}
       </ul>
-      <h2>{post.frontmatter.title}</h2>
-      <p>{post.excerpt}</p>
+      <H2BlogPostTitle>{post.frontmatter.title}</H2BlogPostTitle>
+      <PBlogPostExcerpt>{post.excerpt}</PBlogPostExcerpt>
     </Link>
-  </div>
+  </DivBlogPost>
 )
 
 BlogPost.propTypes = {
