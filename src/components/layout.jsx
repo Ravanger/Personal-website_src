@@ -6,6 +6,9 @@ import Header from "./header"
 import Footer from "./footer"
 
 const GlobalStyles = createGlobalStyle`
+  body {
+        font-family: 'Roboto', sans-serif;
+      }
   li {
     display: inline-block;
   }
@@ -17,7 +20,7 @@ const GlobalStyles = createGlobalStyle`
 const SiteWrapper = styled.div`
   margin: 0 auto;
   max-width: 960px;
-  padding: 0 1.0875rem 1.45rem;
+  padding: 0 1rem 1.45rem;
 `
 
 const Layout = ({ children }) => {
