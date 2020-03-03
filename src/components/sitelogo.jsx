@@ -26,7 +26,7 @@ const SiteLogo = () => {
   `)
 
   return (
-    <div>
+    <div className="pure-u-1-2">
       <Link to="/">
         <H1LogoTitle>{data.site.siteMetadata.title}</H1LogoTitle>
         <H2LogoSubtitle>{data.site.siteMetadata.subtitle}</H2LogoSubtitle>

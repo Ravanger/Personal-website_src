@@ -1,13 +1,20 @@
 import React from "react"
 
+import styled from "styled-components"
+
 import SiteLogo from "./sitelogo"
 import MainMenu from "./mainmenu"
 
+const HeaderWrapper = styled.header`
+  margin: 3rem 0;
+  margin-bottom: 5rem;
+`
+
 const Header = () => (
-  <header>
+  <HeaderWrapper className="pure-g">
     <SiteLogo />
     <MainMenu />
-  </header>
+  </HeaderWrapper>
 )
 
 export default Header

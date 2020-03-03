@@ -2,12 +2,15 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled, { createGlobalStyle } from "styled-components"
 
+import "purecss/build/grids-min.css"
+import "purecss/build/grids-responsive-min.css"
+
 import Header from "./header"
 import Footer from "./footer"
 
 const GlobalStyles = createGlobalStyle`
-  body {
-        font-family: 'Roboto', sans-serif;
+  body, a {
+    font-family: 'Roboto', sans-serif !important;
   }
   a {
     text-decoration: none;

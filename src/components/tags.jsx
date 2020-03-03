@@ -4,6 +4,10 @@ import kebabCase from "lodash/kebabCase"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
+const DivTagsWrapper = styled.div`
+  margin: 3rem 0;
+`
+
 const UlTagsList = styled.ul`
   text-align: center;
 `
@@ -27,7 +31,7 @@ const Tags = () => {
   `)
 
   return (
-    <div className="tagslist">
+    <DivTagsWrapper className="tagslist">
       <UlTagsList>
         {data.allMdx.group.map(tag => (
           <LiTagItem key={tag.fieldValue}>
@@ -37,7 +41,7 @@ const Tags = () => {
           </LiTagItem>
         ))}
       </UlTagsList>
-    </div>
+    </DivTagsWrapper>
   )
 }
 
