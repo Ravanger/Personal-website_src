@@ -1,32 +1,31 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { createGlobalStyle } from "styled-components"
+import styled, { createGlobalStyle } from "styled-components"
 
 import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    color: ${props => (props.theme === "purple" ? "purple" : "black")};
+const GlobalStyles = createGlobalStyle`
+  li {
+    display: inline-block;
   }
+`
+const SiteWrapper = styled.div`
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 1.0875rem 1.45rem;
 `
 
 const Layout = ({ children }) => {
   return (
     <>
-      <GlobalStyle theme="" />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <GlobalStyles />
+      <SiteWrapper>
         <Header />
         <main>{children}</main>
         <Footer />
-      </div>
+      </SiteWrapper>
     </>
   )
 }
