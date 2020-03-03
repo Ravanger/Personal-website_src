@@ -5,6 +5,7 @@ import PropTypes from "prop-types"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Tags from "../components/tags"
 
 export const pageQuery = graphql`
   query($tag: String) {
@@ -36,6 +37,7 @@ const Tag = ({ pageContext, data }) => {
     <Layout>
       <SEO title="Tag" />
       <div>
+        <Tags />
         <h1>{tagHeader}</h1>
         {edges.map(({ node }) => {
           const { title, path } = node.frontmatter

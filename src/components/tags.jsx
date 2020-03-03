@@ -35,7 +35,10 @@ const Tags = () => {
       <UlTagsList>
         {data.allMdx.group.map(tag => (
           <LiTagItem key={tag.fieldValue}>
-            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+            <Link
+              to={`/tags/${kebabCase(tag.fieldValue)}/`}
+              activeStyle={{ color: "#5a9c88" }}
+            >
               {tag.fieldValue} ({tag.totalCount})
             </Link>
           </LiTagItem>

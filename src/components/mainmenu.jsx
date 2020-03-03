@@ -16,21 +16,41 @@ const NavMainMenu = styled.nav`
   font-size: 1.25em;
 `
 
+const LinkAnimated = styled(Link)`
+  transition: color 0.4s ease 0s;
+`
+
 const MainMenu = () => (
   <DivMainMenuWrapper className="pure-u-1-2">
     <NavMainMenu className="pure-g">
-      <Link to="/" className="pure-u-1-4">
+      <LinkAnimated
+        to="/"
+        className="pure-u-1-4"
+        activeStyle={{ color: "#5a9c88" }}
+      >
         Projects
-      </Link>
-      <Link to="/visual" className="pure-u-1-4">
+      </LinkAnimated>
+      <LinkAnimated
+        to="/visual"
+        className="pure-u-1-4"
+        activeStyle={{ color: "#5a9c88" }}
+      >
         Visual
-      </Link>
-      <Link to="/audio" className="pure-u-1-4">
+      </LinkAnimated>
+      <LinkAnimated
+        to="/audio"
+        className="pure-u-1-4"
+        activeStyle={{ color: "#5a9c88" }}
+      >
         Audio
-      </Link>
-      <Link to="/contact" className="pure-u-1-4">
+      </LinkAnimated>
+      <LinkAnimated
+        to="/contact"
+        className="pure-u-1-4"
+        activeStyle={{ color: "#5a9c88" }}
+      >
         Contact
-      </Link>
+      </LinkAnimated>
     </NavMainMenu>
   </DivMainMenuWrapper>
 )

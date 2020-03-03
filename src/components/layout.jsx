@@ -14,6 +14,10 @@ const GlobalStyles = createGlobalStyle`
   }
   a {
     text-decoration: none;
+    color: #000000;
+    &:focus, &:hover {
+      color: #5a9c88;
+    }
   }
   li {
     display: inline-block;

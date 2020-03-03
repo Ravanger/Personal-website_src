@@ -66,8 +66,8 @@ module.exports = {
         name: `boris-rossovsky`,
         short_name: `borisr`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#5a9c88`,
+        theme_color: `#5a9c88`,
         display: `standalone`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },

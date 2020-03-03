@@ -8,7 +8,7 @@ import styled from "styled-components"
 const DivBlogPost = styled.div`
   border-width: 1px;
   border-style: solid;
-  border-color: rgba(90, 156, 136, 0.5);
+  border-color: #5a9c88;
   margin: 1rem;
 `
 
