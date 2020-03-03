@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Boris Rossovsky Site`,
+    title: `Boris Rossovsky`,
+    subtitle: `Design & Development`,
     description: `Design & Development`,
     author: `Boris rossovsky`,
     siteUrl: `https://borisr.dev`,
