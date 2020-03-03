@@ -22,17 +22,17 @@ const AllBlogPosts = () => {
   `)
 
   return (
-    <>
+    <div className="allblogposts">
       {data.allMdx.edges.map(({ node: post }) => (
-        <div key={post.id}>
-          <Link to={post.frontmatter.path}>
+        <Link to={post.frontmatter.path} key={post.id}>
+          <div className="blogpost">
             <h2>{post.frontmatter.title}</h2>
-          </Link>
-          <h3>{post.frontmatter.date}</h3>
-          <p>{post.excerpt}</p>
-        </div>
+            <h3>{post.frontmatter.date}</h3>
+            <p>{post.excerpt}</p>
+          </div>
+        </Link>
       ))}
-    </>
+    </div>
   )
 }
 
