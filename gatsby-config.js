@@ -5,6 +5,11 @@ module.exports = {
     description: `Design & Development`,
     author: `Boris rossovsky`,
     siteUrl: `https://borisr.dev`,
+    email: `contact@borisr.dev`,
+    facebook: `https://www.facebook.com/ravanger666`,
+    instagram: `https://www.instagram.com/ravanger666`,
+    github: `https://github.com/Ravanger`,
+    linkedin: `https://www.linkedin.com/in/brossovsky`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
