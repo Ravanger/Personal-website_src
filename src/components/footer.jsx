@@ -8,6 +8,11 @@ import {
   FaLinkedin,
   FaGithub,
 } from "react-icons/fa"
+import styled from "styled-components"
+
+const FooterWrapper = styled.footer`
+  text-align: center;
+`
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -25,7 +30,7 @@ const Footer = () => {
   `)
 
   return (
-    <footer>
+    <FooterWrapper>
       boris rossovsky {new Date().getFullYear()}
       <ul>
         <li>
@@ -70,7 +75,7 @@ const Footer = () => {
           </a>
         </li>
       </ul>
-    </footer>
+    </FooterWrapper>
   )
 }
 

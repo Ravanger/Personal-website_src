@@ -2,6 +2,11 @@ import React from "react"
 import kebabCase from "lodash/kebabCase"
 
 import { Link, useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
+
+const UlTagsList = styled.ul`
+  text-align: center;
+`
 
 const Tags = () => {
   const data = useStaticQuery(graphql`
@@ -17,7 +22,7 @@ const Tags = () => {
 
   return (
     <div className="tagslist">
-      <ul>
+      <UlTagsList>
         {data.allMdx.group.map(tag => (
           <li key={tag.fieldValue}>
             <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
@@ -25,7 +30,7 @@ const Tags = () => {
             </Link>
           </li>
         ))}
-      </ul>
+      </UlTagsList>
     </div>
   )
 }
