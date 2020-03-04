@@ -18,7 +18,7 @@ const LiTagItem = styled.li`
   }
 `
 
-const Tags = () => {
+const TagsMenu = () => {
   const data = useStaticQuery(graphql`
     query {
       allMdx(limit: 2000) {
@@ -48,4 +48,4 @@ const Tags = () => {
   )
 }
 
-export default Tags
+export default TagsMenu

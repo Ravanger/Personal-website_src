@@ -4,8 +4,8 @@ import kebabCase from "lodash/kebabCase"
 import { graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../layout"
+import SEO from "../seo"
 
 export const pageQuery = graphql`
   query($id: String) {

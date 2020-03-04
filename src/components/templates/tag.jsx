@@ -3,9 +3,9 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import PropTypes from "prop-types"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Tags from "../components/tags"
+import Layout from "../layout"
+import SEO from "../seo"
+import TagsMenu from "../tagsmenu"
 
 export const pageQuery = graphql`
   query($tag: String) {
@@ -37,7 +37,7 @@ const Tag = ({ pageContext, data }) => {
     <Layout>
       <SEO title="Tag" />
       <div>
-        <Tags />
+        <TagsMenu />
         <h1>{tagHeader}</h1>
         {edges.map(({ node }) => {
           const { title, path } = node.frontmatter

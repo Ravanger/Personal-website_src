@@ -4,8 +4,8 @@ const _ = require("lodash")
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
-  const postTemplate = path.resolve(`./src/components/post.jsx`)
-  const tagTemplate = path.resolve(`./src/components/tag.jsx`)
+  const postTemplate = path.resolve(`./src/components/templates/post.jsx`)
+  const tagTemplate = path.resolve(`./src/components/templates/tag.jsx`)
 
   const result = await graphql(`
     query {
@@ -37,8 +37,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       component: postTemplate,
       context: {
         id: post.node.id,
-        prev: index === 0 ? null : posts[index - 1].node,
-        next: index === posts.length - 1 ? null : posts[index + 1].node,
+        next: index === 0 ? null : posts[index - 1].node,
+        prev: index === posts.length - 1 ? null : posts[index + 1].node,
       },
     })
   })

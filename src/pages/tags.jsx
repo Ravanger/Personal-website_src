@@ -6,6 +6,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import TagsMenu from "../components/tagsmenu"
 
 const Tags = () => {
   const data = useStaticQuery(graphql`
@@ -24,6 +25,7 @@ const Tags = () => {
       <div>
         <SEO title="Tags" />
         <div>
+          <TagsMenu />
           <h1>Tags</h1>
           {data.allMdx.group.map(tag => (
             <div key={tag.fieldValue}>

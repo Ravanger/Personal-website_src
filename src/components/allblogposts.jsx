@@ -7,7 +7,7 @@ import BlogPost from "./blogpost"
 const AllBlogPosts = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMdx {
+      allMdx(sort: { order: DESC, fields: frontmatter___date }, limit: 2000) {
         edges {
           node {
             id
