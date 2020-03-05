@@ -9,7 +9,7 @@ import Header from "./header"
 import Footer from "./footer"
 
 const GlobalStyles = createGlobalStyle`
-  body, a {
+  body, a, p {
     font-family: 'Roboto', sans-serif !important;
   }
   a {
