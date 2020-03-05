@@ -31,21 +31,21 @@ const MainMenu = () => (
         Projects
       </LinkAnimated>
       <LinkAnimated
-        to="/visual"
+        to="/visual/"
         className="pure-u-1-4"
         activeStyle={{ color: "#5a9c88" }}
       >
         Visual
       </LinkAnimated>
       <LinkAnimated
-        to="/audio"
+        to="/audio/"
         className="pure-u-1-4"
         activeStyle={{ color: "#5a9c88" }}
       >
         Audio
       </LinkAnimated>
       <LinkAnimated
-        to="/contact"
+        to="/contact/"
         className="pure-u-1-4"
         activeStyle={{ color: "#5a9c88" }}
       >
