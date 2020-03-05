@@ -34,6 +34,7 @@ const BlogPost = ({ post }) => (
         <img
           src="https://via.placeholder.com/666"
           style={{ width: "100%", height: "100%" }}
+          alt="Placeholder"
         ></img>
       </Link>
     </div>
