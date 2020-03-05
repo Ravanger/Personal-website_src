@@ -44,7 +44,7 @@ const Footer = () => {
       <PFooterNotice>boris rossovsky {new Date().getFullYear()}</PFooterNotice>
       <ul>
         <LiSocialsItem>
-          <a href={"mailto:" + data.site.siteMetadata.email}>
+          <a href={"mailto:" + data.site.siteMetadata.email} aria-label="Email">
             <FaEnvelope />
           </a>
         </LiSocialsItem>
@@ -53,6 +53,7 @@ const Footer = () => {
             href={data.site.siteMetadata.facebook}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Facebook"
           >
             <FaFacebook />
           </a>
@@ -62,6 +63,7 @@ const Footer = () => {
             href={data.site.siteMetadata.instagram}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Instagram"
           >
             <FaInstagram />
           </a>
@@ -71,6 +73,7 @@ const Footer = () => {
             href={data.site.siteMetadata.github}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Github"
           >
             <FaGithub />
           </a>
@@ -80,6 +83,7 @@ const Footer = () => {
             href={data.site.siteMetadata.linkedin}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Linkedin"
           >
             <FaLinkedin />
           </a>
