@@ -12,7 +12,13 @@ const DivBlogPost = styled.div`
   margin: 1rem;
 `
 
+const DivBlogPostText = styled.div`
+  padding: 2rem;
+  box-sizing: border-box;
+`
+
 const H2BlogPostTitle = styled.h2`
+  margin-top: 2rem;
   font-size: 1.75em;
 `
 
@@ -32,13 +38,13 @@ const BlogPost = ({ post }) => (
     <div className="pure-u-1-2">
       <Link to={post.frontmatter.path}>
         <img
-          src="https://via.placeholder.com/666"
+          src="https://via.placeholder.com/500x350"
           style={{ width: "100%", height: "100%" }}
           alt="Placeholder"
         ></img>
       </Link>
     </div>
-    <div className="pure-u-1-2">
+    <DivBlogPostText className="pure-u-1-2">
       <p>
         {post.frontmatter.date} - {post.timeToRead} min read
       </p>
@@ -53,7 +59,7 @@ const BlogPost = ({ post }) => (
         <H2BlogPostTitle>{post.frontmatter.title}</H2BlogPostTitle>
         <PBlogPostExcerpt>{post.excerpt}</PBlogPostExcerpt>
       </Link>
-    </div>
+    </DivBlogPostText>
   </DivBlogPost>
 )
 
