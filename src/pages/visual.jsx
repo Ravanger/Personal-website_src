@@ -2,9 +2,18 @@ import React from "react"
 
 import { useStaticQuery, graphql } from "gatsby"
 import GatsbyImage from "gatsby-image"
+import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+const DivGalleryWrapper = styled.div`
+  text-align: center;
+`
+
+const StyledGatsbyImage = styled(GatsbyImage)`
+  margin: 0.3rem 0.5rem;
+`
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -30,15 +39,15 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Visual" description="My Instagram stuff" />
-      <div>
+      <DivGalleryWrapper>
         {data.allInstaNode.edges.map(({ node: instapic }) => (
-          <GatsbyImage
+          <StyledGatsbyImage
             key={instapic.id}
             alt={instapic.caption}
             fixed={instapic.localFile.childImageSharp.fixed}
           />
         ))}
-      </div>
+      </DivGalleryWrapper>
     </Layout>
   )
 }
