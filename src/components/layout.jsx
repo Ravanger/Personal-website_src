@@ -31,6 +31,9 @@ const DivSiteWrapper = styled.div`
   margin: 0 auto;
   max-width: 960px;
   padding: 0 1rem 1.45rem;
+  @media (max-width: 35.5em) {
+    padding: 0;
+  }
 `
 
 const Layout = ({ children }) => {
