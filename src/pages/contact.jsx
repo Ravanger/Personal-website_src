@@ -60,7 +60,7 @@ const IndexPage = () => (
       />
       <InputStyled
         type="email"
-        name="name"
+        name="email"
         placeholder="Your email"
         className="pure-u-1"
         required
