@@ -20,6 +20,7 @@ const PFooterNotice = styled.p`
 `
 
 const LiSocialsItem = styled.li`
+  font-size: 1.5em;
   & + li {
     margin-left: 1rem;
   }
