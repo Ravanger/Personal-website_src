@@ -8,12 +8,16 @@ const IndexPage = () => (
     <SEO title="Contact" description="Send me an email" />
     <form
       name="contact"
-      method="POST"
+      method="post"
+      netlify-honeypot="bot-field"
       data-netlify="true"
-      data-netlify-honeypot="bot-field"
+      data-netlify-recaptcha="true"
     >
+      <input type="hidden" name="bot-field" />
       <input type="text" name="name" placeholder="Your name" />
       <button type="submit">Send</button>
+      <input type="reset" value="Clear" />
+      <div data-netlify-recaptcha="true"></div>
     </form>
   </Layout>
 )
