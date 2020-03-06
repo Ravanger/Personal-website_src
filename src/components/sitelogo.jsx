@@ -4,13 +4,13 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
 const H1LogoTitle = styled.h1`
-  font-size: 42px;
+  font-size: 2.5em;
   line-height: 0.75;
   width: 6em;
 `
 
 const H2LogoSubtitle = styled.h2`
-  font-size: 15px;
+  font-size: 1em;
   font-weight: 100;
 `
 
