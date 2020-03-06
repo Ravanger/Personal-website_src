@@ -5,9 +5,34 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const PHidden = styled.p`
-  visibility: hidden;
-  display: none;
+const InputStyled = styled.input`
+  font-size: 1em;
+  border-width: 1px;
+  border-color: #5a9c88;
+  padding: 1.5em;
+`
+
+const TextAreaStyled = styled.textarea`
+  border-width: 1px;
+  border-color: #5a9c88;
+  padding: 1.5em;
+  margin: 0;
+  resize: vertical;
+`
+
+const ButtonStyled = styled.button`
+  font-size: 1.25em;
+  color: white;
+  background-color: #5a9c88;
+  transition: background-color 0.2s ease 0s;
+  border: 0;
+  height: 3.125em;
+  padding: 0;
+  &:focus,
+  &:hover {
+    background-color: #417163;
+    transition: background-color 0.2s ease 0s;
+  }
 `
 
 const IndexPage = () => (
@@ -18,16 +43,39 @@ const IndexPage = () => (
       data-netlify="true"
       netlify-honeypot="bot-field"
       name="contact"
+      className="pure-g"
     >
       <input type="hidden" name="form-name" value="contact" />
-      <PHidden>
+      <p hidden>
         <label>
           Don’t fill this out if you're human: <input name="bot-field" />
         </label>
-      </PHidden>
-      <input type="text" name="name" placeholder="Your name" />
-      <button type="submit">Send</button>
-      <input type="reset" value="Clear" />
+      </p>
+      <InputStyled
+        type="text"
+        name="name"
+        placeholder="Your name"
+        className="pure-u-1"
+        required
+      />
+      <InputStyled
+        type="email"
+        name="name"
+        placeholder="Your email"
+        className="pure-u-1"
+        required
+      />
+      <TextAreaStyled
+        name="message"
+        placeholder="Your message"
+        rows="5"
+        className="pure-u-1"
+        required
+      />
+      <div className="pure-u-sm-2-3"></div>
+      <ButtonStyled type="submit" className="pure-u-1 pure-u-sm-1-3">
+        Send
+      </ButtonStyled>
     </form>
   </Layout>
 )
