@@ -14,11 +14,10 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Contact" description="Send me an email" />
     <form
-      name="contact"
       method="post"
       data-netlify="true"
       netlify-honeypot="bot-field"
-      data-netlify-recaptcha="true"
+      name="contact"
     >
       <input type="hidden" name="form-name" value="contact" />
       <PHidden>
@@ -27,7 +26,6 @@ const IndexPage = () => (
         </label>
       </PHidden>
       <input type="text" name="name" placeholder="Your name" />
-      <div data-netlify-recaptcha="true"></div>
       <button type="submit">Send</button>
       <input type="reset" value="Clear" />
     </form>
