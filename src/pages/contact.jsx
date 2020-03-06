@@ -1,7 +1,14 @@
 import React from "react"
 
+import styled from "styled-components"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+const PHidden = styled.p`
+  visibility: hidden;
+  display: none;
+`
 
 const IndexPage = () => (
   <Layout>
@@ -9,16 +16,20 @@ const IndexPage = () => (
     <form
       name="contact"
       method="post"
-      netlify-honeypot="bot-field"
       data-netlify="true"
+      netlify-honeypot="bot-field"
       data-netlify-recaptcha="true"
     >
-      <input type="hidden" name="bot-field" />
       <input type="hidden" name="form-name" value="contact" />
+      <PHidden>
+        <label>
+          Don’t fill this out if you're human: <input name="bot-field" />
+        </label>
+      </PHidden>
       <input type="text" name="name" placeholder="Your name" />
+      <div data-netlify-recaptcha="true"></div>
       <button type="submit">Send</button>
       <input type="reset" value="Clear" />
-      <div data-netlify-recaptcha="true"></div>
     </form>
   </Layout>
 )
