@@ -13,7 +13,7 @@ const DivBlogPost = styled.div`
 `
 
 const H2BlogPostTitle = styled.h2`
-  font-size: 28px;
+  font-size: 1.75em;
 `
 
 const PBlogPostExcerpt = styled.p`
