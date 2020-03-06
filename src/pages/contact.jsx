@@ -13,7 +13,7 @@ const IndexPage = () => (
       data-netlify="true"
       data-netlify-recaptcha="true"
     >
-      <input type="hidden" name="bot-field" />
+      <input type="hidden" name="form-name" value="contact" />
       <input type="text" name="name" placeholder="Your name" />
       <button type="submit">Send</button>
       <input type="reset" value="Clear" />
