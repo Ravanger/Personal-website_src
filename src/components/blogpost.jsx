@@ -35,16 +35,16 @@ const LiTagItem = styled.li`
 
 const BlogPost = ({ post }) => (
   <DivBlogPost className="pure-g">
-    <div className="pure-u-1 pure-u-sm-1-2">
+    <div className="pure-u-1 pure-u-md-1-2">
       <Link to={post.frontmatter.path}>
         <img
-          src="https://via.placeholder.com/500x350"
+          src="https://via.placeholder.com/362x258"
           style={{ width: "100%", height: "100%" }}
           alt="Placeholder"
         ></img>
       </Link>
     </div>
-    <DivBlogPostText className="pure-u-1 pure-u-sm-1-2">
+    <DivBlogPostText className="pure-u-1 pure-u-md-1-2">
       <p>
         {post.frontmatter.date} - {post.timeToRead} min read
       </p>
