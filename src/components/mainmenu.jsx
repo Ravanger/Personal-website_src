@@ -61,28 +61,28 @@ const MainMenu = () => (
       <NavMainMenu className="pure-g">
         <LinkAnimated
           to="/"
-          className="pure-u-1 pure-u-sm-1-4"
+          className="pure-u-1 pure-u-md-1-4"
           activeStyle={{ color: "#5a9c88" }}
         >
           Projects
         </LinkAnimated>
         <LinkAnimated
           to="/visual/"
-          className="pure-u-1 pure-u-sm-1-4"
+          className="pure-u-1 pure-u-md-1-4"
           activeStyle={{ color: "#5a9c88" }}
         >
           Visual
         </LinkAnimated>
         <LinkAnimated
           to="/audio/"
-          className="pure-u-1 pure-u-sm-1-4"
+          className="pure-u-1 pure-u-md-1-4"
           activeStyle={{ color: "#5a9c88" }}
         >
           Audio
         </LinkAnimated>
         <LinkAnimated
           to="/contact/"
-          className="pure-u-1 pure-u-sm-1-4"
+          className="pure-u-1 pure-u-md-1-4"
           activeStyle={{ color: "#5a9c88" }}
         >
           Contact
