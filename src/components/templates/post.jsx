@@ -3,6 +3,7 @@ import React from "react"
 import kebabCase from "lodash/kebabCase"
 import { graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import PropTypes from "prop-types"
 
 import Layout from "../layout"
 import SEO from "../seo"
@@ -23,14 +24,15 @@ export const pageQuery = graphql`
 `
 
 const Post = ({ data: { mdx }, pageContext }) => {
-  const tags = mdx.frontmatter.tags
+  const frontmatterData = mdx.frontmatter
+  const tags = frontmatterData.tags
   const { next, prev } = pageContext
 
   return (
     <Layout>
       <SEO
-        title={mdx.frontmatter.title}
-        description={mdx.frontmatter.description}
+        title={frontmatterData.title}
+        description={frontmatterData.description}
       />
       <div className="pure-g">
         {prev && (
@@ -50,16 +52,38 @@ const Post = ({ data: { mdx }, pageContext }) => {
           </div>
         )}
       </div>
-      <h1>{mdx.frontmatter.title}</h1>
-      <h2>{mdx.frontmatter.date}</h2>
+      <h1>{frontmatterData.title}</h1>
+      <h2>{frontmatterData.date}</h2>
       <h3>
-        {tags.map(tag => (
-          <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+        {tags.map((tag, index) => (
+          <Link to={`/tags/${kebabCase(tag)}/`} key={index}>
+            {tag}
+          </Link>
         ))}
       </h3>
       <MDXRenderer>{mdx.body}</MDXRenderer>
     </Layout>
   )
+}
+
+Post.propTypes = {
+  pageContext: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    next: PropTypes.object,
+    prev: PropTypes.object,
+  }),
+
+  data: PropTypes.shape({
+    mdx: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      frontmatter: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        date: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        tags: PropTypes.array.isRequired,
+      }),
+    }),
+  }),
 }
 
 export default Post

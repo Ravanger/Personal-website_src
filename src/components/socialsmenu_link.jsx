@@ -1,5 +1,6 @@
 import React from "react"
 
+import PropTypes from "prop-types"
 import styled from "styled-components"
 
 const LiSocialsItem = styled.li`
@@ -28,5 +29,12 @@ const SocialsMenuLink = ({ url, ariaLabel, children, isMail }) => (
     )}
   </LiSocialsItem>
 )
+
+SocialsMenuLink.propTypes = {
+  url: PropTypes.string.isRequired,
+  ariaLabel: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  isMail: PropTypes.bool,
+}
 
 export default SocialsMenuLink

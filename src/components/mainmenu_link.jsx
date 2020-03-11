@@ -1,6 +1,7 @@
 import React from "react"
 
 import { Link } from "gatsby"
+import PropTypes from "prop-types"
 import styled from "styled-components"
 
 const LinkAnimated = styled(Link)`
@@ -19,5 +20,10 @@ const MainMenuLink = ({ url, name }) => (
     {name}
   </LinkAnimated>
 )
+
+MainMenuLink.propTypes = {
+  url: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+}
 
 export default MainMenuLink
