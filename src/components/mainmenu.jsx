@@ -43,7 +43,7 @@ const CheckboxController = styled.input`
 const MainMenu = () => (
   <DivMainMenuWrapper className="pure-u-1-2">
     <CheckboxController type="checkbox" id="toggle" hidden />
-    <LabelBurgerMenu for="toggle">
+    <LabelBurgerMenu htmlFor="toggle">
       <FaBars />
     </LabelBurgerMenu>
     <NavMainMenu className="pure-g">
