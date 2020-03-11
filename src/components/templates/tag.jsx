@@ -2,6 +2,7 @@ import React from "react"
 
 import { Link, graphql } from "gatsby"
 import PropTypes from "prop-types"
+import styled from "styled-components"
 
 import Layout from "../layout"
 import SEO from "../seo"
@@ -27,28 +28,41 @@ export const pageQuery = graphql`
   }
 `
 
+const H1TagHeader = styled.h1`
+  margin-bottom: 2rem;
+`
+
+const LiTagItem = styled.li`
+  margin-bottom: 1rem;
+`
+
+const LinkAllTags = styled(Link)`
+  font-weight: 700;
+`
+
 const Tag = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMdx
-  const tagHeader = `${totalCount} post${
+  const tagHeader = `${totalCount} project${
     totalCount === 1 ? "" : "s"
   } tagged with "${tag}"`
+
   return (
     <Layout>
-      <SEO title="Tag" />
-      <div>
-        <TagsMenu />
-        <h1>{tagHeader}</h1>
+      <SEO title={"Projects tagged " + tag} />
+      <TagsMenu />
+      <H1TagHeader>{tagHeader}</H1TagHeader>
+      <ul>
         {edges.map(({ node }) => {
           const { title, path } = node.frontmatter
           return (
-            <div key={path}>
+            <LiTagItem key={path} className="pure-u-1">
               <Link to={path}>{title}</Link>
-            </div>
+            </LiTagItem>
           )
         })}
-        <Link to="/tags">All tags</Link>
-      </div>
+      </ul>
+      <LinkAllTags to="/tags">All tags</LinkAllTags>
     </Layout>
   )
 }

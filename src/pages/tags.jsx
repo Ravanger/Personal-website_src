@@ -3,10 +3,19 @@ import PropTypes from "prop-types"
 import kebabCase from "lodash/kebabCase"
 
 import { Link, useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import TagsMenu from "../components/tagsmenu"
+
+const H1TagHeader = styled.h1`
+  margin-bottom: 2rem;
+`
+
+const LiTagItem = styled.li`
+  margin-bottom: 1rem;
+`
 
 const Tags = () => {
   const data = useStaticQuery(graphql`
@@ -22,20 +31,18 @@ const Tags = () => {
 
   return (
     <Layout>
-      <div>
-        <SEO title="Tags" />
-        <div>
-          <TagsMenu />
-          <h1>Tags</h1>
-          {data.allMdx.group.map(tag => (
-            <div key={tag.fieldValue}>
-              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                {tag.fieldValue} ({tag.totalCount})
-              </Link>
-            </div>
-          ))}
-        </div>
-      </div>
+      <SEO title="All tags" />
+      <TagsMenu />
+      <H1TagHeader>Tags</H1TagHeader>
+      <ul>
+        {data.allMdx.group.map(tag => (
+          <LiTagItem key={tag.fieldValue} className="pure-u-1">
+            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+              {tag.fieldValue} ({tag.totalCount})
+            </Link>
+          </LiTagItem>
+        ))}
+      </ul>
     </Layout>
   )
 }
