@@ -6,9 +6,9 @@ import styled from "styled-components"
 import MainMenuLink from "./mainmenu_link"
 
 const DivMainMenuWrapper = styled.div`
-  position: relative;
-  @media (max-width: 48em) {
-    text-align: right;
+  text-align: right;
+  @media (min-width: 48em) {
+    position: relative;
   }
 `
 
@@ -20,15 +20,15 @@ const LabelBurgerMenu = styled.label`
 `
 
 const NavMainMenu = styled.nav`
-  position: absolute;
-  bottom: 0;
+  position: relative;
   width: 100%;
-  text-align: center;
   font-size: 1.25em;
-  @media (max-width: 48em) {
-    text-align: right;
-    position: relative;
-    display: none;
+  display: none;
+  @media (min-width: 48em) {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    display: flex;
   }
 `
 
