@@ -1,9 +1,9 @@
 import React from "react"
 
-import { Link } from "gatsby"
 import { FaBars } from "react-icons/fa"
-
 import styled from "styled-components"
+
+import MainMenuLink from "./mainmenu_link"
 
 const DivMainMenuWrapper = styled.div`
   position: relative;
@@ -40,13 +40,6 @@ const CheckboxController = styled.input`
   }
 `
 
-const LinkAnimated = styled(Link)`
-  transition: color 0.4s ease 0s;
-  @media (max-width: 48em) {
-    padding-top: 1rem;
-  }
-`
-
 const MainMenu = () => (
   <DivMainMenuWrapper className="pure-u-1-2">
     <CheckboxController type="checkbox" id="toggle" hidden />
@@ -54,34 +47,10 @@ const MainMenu = () => (
       <FaBars />
     </LabelBurgerMenu>
     <NavMainMenu className="pure-g">
-      <LinkAnimated
-        to="/"
-        className="pure-u-1 pure-u-md-1-4"
-        activeStyle={{ color: "#5a9c88" }}
-      >
-        Projects
-      </LinkAnimated>
-      <LinkAnimated
-        to="/visual/"
-        className="pure-u-1 pure-u-md-1-4"
-        activeStyle={{ color: "#5a9c88" }}
-      >
-        Visual
-      </LinkAnimated>
-      <LinkAnimated
-        to="/audio/"
-        className="pure-u-1 pure-u-md-1-4"
-        activeStyle={{ color: "#5a9c88" }}
-      >
-        Audio
-      </LinkAnimated>
-      <LinkAnimated
-        to="/contact/"
-        className="pure-u-1 pure-u-md-1-4"
-        activeStyle={{ color: "#5a9c88" }}
-      >
-        Contact
-      </LinkAnimated>
+      <MainMenuLink url="/" name="Projects" />
+      <MainMenuLink url="/visual/" name="Visual" />
+      <MainMenuLink url="/audio/" name="Audio" />
+      <MainMenuLink url="/contact/" name="Contact" />
     </NavMainMenu>
   </DivMainMenuWrapper>
 )
