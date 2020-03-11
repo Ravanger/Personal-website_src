@@ -12,18 +12,11 @@ const DivMainMenuWrapper = styled.div`
   }
 `
 
-const ButtonBurger = styled.button`
-  border: none;
-  background-color: transparent;
-  padding: 0;
+const LabelBurgerMenu = styled.label`
+  font-size: 2em;
   @media (min-width: 48em) {
     display: none;
   }
-`
-
-const SpanMenuWrapper = styled.span`
-  margin-right: 2rem;
-  display: block;
 `
 
 const NavMainMenu = styled.nav`
@@ -37,8 +30,10 @@ const NavMainMenu = styled.nav`
     position: relative;
     display: none;
   }
-  ${SpanMenuWrapper}:hover &,
-  ${SpanMenuWrapper}:focus-within & {
+`
+
+const CheckboxController = styled.input`
+  &:checked ~ ${NavMainMenu} {
     @media (max-width: 48em) {
       display: flex;
     }
@@ -54,41 +49,40 @@ const LinkAnimated = styled(Link)`
 
 const MainMenu = () => (
   <DivMainMenuWrapper className="pure-u-1-2">
-    <SpanMenuWrapper>
-      <ButtonBurger aria-label="Toggle menu">
-        <FaBars size="2em" />
-      </ButtonBurger>
-      <NavMainMenu className="pure-g">
-        <LinkAnimated
-          to="/"
-          className="pure-u-1 pure-u-md-1-4"
-          activeStyle={{ color: "#5a9c88" }}
-        >
-          Projects
-        </LinkAnimated>
-        <LinkAnimated
-          to="/visual/"
-          className="pure-u-1 pure-u-md-1-4"
-          activeStyle={{ color: "#5a9c88" }}
-        >
-          Visual
-        </LinkAnimated>
-        <LinkAnimated
-          to="/audio/"
-          className="pure-u-1 pure-u-md-1-4"
-          activeStyle={{ color: "#5a9c88" }}
-        >
-          Audio
-        </LinkAnimated>
-        <LinkAnimated
-          to="/contact/"
-          className="pure-u-1 pure-u-md-1-4"
-          activeStyle={{ color: "#5a9c88" }}
-        >
-          Contact
-        </LinkAnimated>
-      </NavMainMenu>
-    </SpanMenuWrapper>
+    <CheckboxController type="checkbox" id="toggle" hidden />
+    <LabelBurgerMenu for="toggle">
+      <FaBars />
+    </LabelBurgerMenu>
+    <NavMainMenu className="pure-g">
+      <LinkAnimated
+        to="/"
+        className="pure-u-1 pure-u-md-1-4"
+        activeStyle={{ color: "#5a9c88" }}
+      >
+        Projects
+      </LinkAnimated>
+      <LinkAnimated
+        to="/visual/"
+        className="pure-u-1 pure-u-md-1-4"
+        activeStyle={{ color: "#5a9c88" }}
+      >
+        Visual
+      </LinkAnimated>
+      <LinkAnimated
+        to="/audio/"
+        className="pure-u-1 pure-u-md-1-4"
+        activeStyle={{ color: "#5a9c88" }}
+      >
+        Audio
+      </LinkAnimated>
+      <LinkAnimated
+        to="/contact/"
+        className="pure-u-1 pure-u-md-1-4"
+        activeStyle={{ color: "#5a9c88" }}
+      >
+        Contact
+      </LinkAnimated>
+    </NavMainMenu>
   </DivMainMenuWrapper>
 )
 
