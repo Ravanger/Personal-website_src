@@ -27,6 +27,7 @@ const PBlogPostExcerpt = styled.p`
 `
 
 const LiTagItem = styled.li`
+  font-weight: 700;
   & + li::before {
     margin: 0.2rem;
     content: "-";

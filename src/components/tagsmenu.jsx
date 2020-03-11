@@ -13,6 +13,7 @@ const UlTagsList = styled.ul`
 `
 
 const LiTagItem = styled.li`
+  font-weight: 700;
   & + li {
     margin-left: 2rem;
   }
