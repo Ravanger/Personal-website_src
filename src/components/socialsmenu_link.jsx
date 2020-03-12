@@ -14,7 +14,6 @@ const SocialsMenuLink = ({ url, ariaLabel, children, isMail }) => (
   <LiSocialsItem>
     {isMail ? (
       <a href={url} aria-label={ariaLabel}>
-        {" "}
         {children}
       </a>
     ) : (

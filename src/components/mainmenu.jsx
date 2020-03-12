@@ -1,9 +1,8 @@
 import React from "react"
 
 import { FaBars } from "react-icons/fa"
+import PropTypes from "prop-types"
 import styled from "styled-components"
-
-import MainMenuLink from "./mainmenu_link"
 
 const DivMainMenuWrapper = styled.div`
   text-align: right;
@@ -40,19 +39,18 @@ const CheckboxController = styled.input`
   }
 `
 
-const MainMenu = () => (
+const MainMenu = ({ children }) => (
   <DivMainMenuWrapper className="pure-u-1-2">
     <CheckboxController type="checkbox" id="toggle" hidden />
     <LabelBurgerMenu htmlFor="toggle">
       <FaBars />
     </LabelBurgerMenu>
-    <NavMainMenu className="pure-g">
-      <MainMenuLink url="/" name="Projects" />
-      <MainMenuLink url="/visual/" name="Visual" />
-      <MainMenuLink url="/audio/" name="Audio" />
-      <MainMenuLink url="/contact/" name="Contact" />
-    </NavMainMenu>
+    <NavMainMenu className="pure-g">{children}</NavMainMenu>
   </DivMainMenuWrapper>
 )
+
+MainMenu.propTypes = {
+  children: PropTypes.node.isRequired,
+}
 
 export default MainMenu

@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 import SiteLogo from "./sitelogo"
 import MainMenu from "./mainmenu"
+import MainMenuLink from "./mainmenu_link"
 
 const HeaderWrapper = styled.header`
   margin: 3rem 0;
@@ -13,7 +14,12 @@ const HeaderWrapper = styled.header`
 const Header = () => (
   <HeaderWrapper className="pure-g">
     <SiteLogo />
-    <MainMenu />
+    <MainMenu>
+      <MainMenuLink url="/" name="Projects" />
+      <MainMenuLink url="/visual/" name="Visual" />
+      <MainMenuLink url="/audio/" name="Audio" />
+      <MainMenuLink url="/contact/" name="Contact" />
+    </MainMenu>
   </HeaderWrapper>
 )
 
