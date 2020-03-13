@@ -19,7 +19,6 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    `gatsby-remark-images`,
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
@@ -51,9 +50,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 800,
-              wrapperStyle: fluidResult =>
-                `flex:${_.round(fluidResult.aspectRatio, 2)};`,
+              maxWidth: 960,
               backgroundColor: `none`,
             },
           },
