@@ -54,6 +54,13 @@ module.exports = {
               backgroundColor: `none`,
             },
           },
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: {
+              destinationDir: `path/to/dir`,
+              ignoreFileExtensions: [`jpg`],
+            },
+          },
         ],
       },
     },
