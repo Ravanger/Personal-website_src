@@ -2,9 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled, { createGlobalStyle } from "styled-components"
 
-import "purecss/build/grids-min.css"
-import "purecss/build/grids-responsive-min.css"
-
 import Header from "./header"
 import Footer from "./footer"
 
@@ -27,6 +24,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
 `
+
 const DivSiteWrapper = styled.div`
   margin: 0 auto;
   max-width: 960px;
