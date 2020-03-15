@@ -68,7 +68,7 @@ module.exports = {
               maxWidth: 960,
               linkImagesToOriginal: false,
               backgroundColor: `none`,
-              quality: 80,
+              quality: 70,
             },
           },
           `gatsby-remark-responsive-iframe`,

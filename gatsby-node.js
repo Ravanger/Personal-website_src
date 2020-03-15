@@ -24,7 +24,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               tags
               heroimage {
                 childImageSharp {
-                  fluid(maxWidth: 480, maxHeight: 480) {
+                  fluid(
+                    maxWidth: 480
+                    maxHeight: 480
+                    quality: 70
+                    cropFocus: CENTER
+                  ) {
                     src
                     srcSet
                     aspectRatio
