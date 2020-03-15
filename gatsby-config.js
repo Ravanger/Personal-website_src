@@ -60,7 +60,7 @@ module.exports = {
             resolve: `gatsby-remark-copy-linked-files`,
             options: {
               destinationDir: `path/to/dir`,
-              ignoreFileExtensions: [`jpg`],
+              ignoreFileExtensions: [`jpg`], //There should only be jpg and gif files
             },
           },
         ],
@@ -81,7 +81,7 @@ module.exports = {
         background_color: `#5a9c88`,
         theme_color: `#5a9c88`,
         display: `standalone`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/gatsby-icon.png`,
       },
     },
     // `gatsby-plugin-offline`,

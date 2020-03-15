@@ -1,11 +1,13 @@
 const path = require("path")
 const _ = require("lodash")
+const createPaginatedPages = require("gatsby-paginate")
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
   const postTemplate = path.resolve(`./src/components/templates/post.jsx`)
   const tagTemplate = path.resolve(`./src/components/templates/tag.jsx`)
+  const indexTemplate = path.resolve(`./src/components/templates/index.jsx`)
 
   const result = await graphql(`
     query {
@@ -13,9 +15,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         edges {
           node {
             id
+            excerpt
+            timeToRead
             frontmatter {
               path
               title
+              date(formatString: "MMM DD, YYYY")
+              tags
             }
           }
         }
@@ -49,7 +55,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createPage({
       path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
       component: tagTemplate,
-      context: { tag: tag.fieldValue },
+      context: {
+        tag: tag.fieldValue,
+      },
     })
+  })
+
+  // Pagination
+  createPaginatedPages({
+    edges: posts,
+    createPage: createPage,
+    pageTemplate: indexTemplate,
+    pageLength: 5, // how many posts to show
+    pathPrefix: "", // path to add to the path generated in the createPagefunc "your_site/your_page_name/2"
+    context: {}, // This is optional and defaults to an empty object if not used
   })
 }
