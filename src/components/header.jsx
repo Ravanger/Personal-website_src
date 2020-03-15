@@ -15,7 +15,7 @@ const Header = () => (
   <HeaderWrapper className="pure-g">
     <SiteLogo />
     <MainMenu>
-      <MainMenuLink url="/" name="Projects" />
+      <MainMenuLink url="/" name="Home" />
       <MainMenuLink url="/visual/" name="Visual" />
       <MainMenuLink url="/audio/" name="Audio" />
       <MainMenuLink url="/contact/" name="Contact" />
