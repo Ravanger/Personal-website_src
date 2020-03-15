@@ -5,7 +5,7 @@ import styled from "styled-components"
 import NavPrevNext from "./navprevnext"
 
 const NavWrapper = styled.nav`
-  margin: 0 2rem;
+  margin: 4rem 2rem;
 `
 
 const DivCenter = styled.div`
