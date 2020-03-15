@@ -15,6 +15,13 @@ const UlTagsList = styled.ul`
 const LiTagItem = styled.li`
   font-weight: 700;
   margin-bottom: 2rem;
+  display: block;
+  @media (min-width: 48em) {
+    display: inline-block;
+    & + li {
+      margin-left: 2em;
+    }
+  }
 `
 
 const TagsMenu = () => {
@@ -30,13 +37,10 @@ const TagsMenu = () => {
   `)
 
   return (
-    <DivTagsWrapper className="tagslist">
+    <DivTagsWrapper>
       <UlTagsList>
         {data.allMdx.group.map(tag => (
-          <LiTagItem
-            key={tag.fieldValue}
-            className="pure-u-1 pure-u-sm-1-3 pure-u-md-1-4 pure-u-lg-1-6"
-          >
+          <LiTagItem key={tag.fieldValue}>
             <Link
               to={`/tags/${kebabCase(tag.fieldValue)}/`}
               activeStyle={{ color: "#5a9c88" }}
