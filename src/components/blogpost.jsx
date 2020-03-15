@@ -13,6 +13,11 @@ const DivBlogPost = styled.div`
   margin: 1rem;
 `
 
+const DivImageWrapper = styled.div`
+  max-height: 22.5em;
+  overflow: hidden;
+`
+
 const DivBlogPostText = styled.div`
   padding: 2rem;
   box-sizing: border-box;
@@ -35,10 +40,16 @@ const LiTagItem = styled.li`
   }
 `
 
+const ImgWrapper = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`
+
 const BlogPost = ({ post }) => {
   return (
     <DivBlogPost className="pure-g">
-      <div className="pure-u-1 pure-u-md-1-2">
+      <DivImageWrapper className="pure-u-1 pure-u-md-1-2">
         <Link to={post.frontmatter.path}>
           {!!post.frontmatter.heroimage &&
           !!post.frontmatter.heroimage.childImageSharp ? (
@@ -47,14 +58,13 @@ const BlogPost = ({ post }) => {
               alt={post.frontmatter.title}
             />
           ) : (
-            <img
+            <ImgWrapper
               src={post.frontmatter.heroimage.publicURL}
               alt={post.frontmatter.title}
-              style={{ width: "100%", height: "100%" }}
             />
           )}
         </Link>
-      </div>
+      </DivImageWrapper>
       <DivBlogPostText className="pure-u-1 pure-u-md-1-2">
         <p>
           {post.frontmatter.date} - {post.timeToRead} min read
