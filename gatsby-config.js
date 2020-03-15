@@ -48,6 +48,21 @@ module.exports = {
       options: {
         gatsbyRemarkPlugins: [
           {
+            resolve: "gatsby-remark-embed-video",
+            options: {
+              width: 960,
+              related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.
+              noIframeBorder: true, //Optional: Disable insertion of <style> border: 0
+              urlOverrides: [
+                {
+                  id: "youtube",
+                  embedURL: videoId =>
+                    `https://www.youtube-nocookie.com/embed/${videoId}`,
+                },
+              ],
+            },
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 960,
@@ -56,6 +71,7 @@ module.exports = {
               quality: 80,
             },
           },
+          `gatsby-remark-responsive-iframe`,
           {
             resolve: `gatsby-remark-copy-linked-files`,
             options: {
