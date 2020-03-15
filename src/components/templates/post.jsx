@@ -60,7 +60,7 @@ const LiTagItem = styled.li`
 
 const H1Title = styled.h1`
   font-size: 1.75em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0rem;
   @media (min-width: 48em) {
     font-size: 2.5em;
   }
@@ -68,7 +68,8 @@ const H1Title = styled.h1`
 
 const H2Description = styled.h2`
   font-size: 1em;
-  margin-bottom: 1.5rem;
+  font-weight: 100;
+  margin-bottom: 6rem;
   @media (min-width: 48em) {
     font-size: 1.5em;
   }
@@ -79,6 +80,22 @@ const ArticleMain = styled.article`
   margin-bottom: 4rem;
   @media (min-width: 48em) {
     font-size: 1.25em;
+  }
+
+  & > p,
+  ul {
+    margin-bottom: 4rem;
+  }
+
+  & > ul > li {
+    display: list-item;
+    margin-bottom: 1rem;
+  }
+
+  & > p > img,
+  & > p > span {
+    width: 100%;
+    max-width: 37.5em !important;
   }
 `
 
