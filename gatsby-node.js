@@ -22,6 +22,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               title
               date(formatString: "MMM DD, YYYY")
               tags
+              heroimage {
+                childImageSharp {
+                  fluid(maxWidth: 480, maxHeight: 480) {
+                    src
+                    srcSet
+                    aspectRatio
+                    sizes
+                    base64
+                  }
+                }
+                publicURL
+              }
             }
           }
         }
