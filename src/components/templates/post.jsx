@@ -9,6 +9,7 @@ import styled from "styled-components"
 import Layout from "../layout"
 import SEO from "../seo"
 import TagsMenu from "../tagsmenu"
+import BlogPostNav from "../blogpost_nav"
 
 export const pageQuery = graphql`
   query($id: String) {
@@ -36,22 +37,11 @@ const SectionBlog = styled.section`
   }
 `
 
-const NavBlogPosts = styled.nav`
-  margin-bottom: 4rem;
-  font-size: 0.875em;
-  @media (min-width: 48em) {
-    font-size: 1em;
-  }
-`
-
-const DivNext = styled.div`
-  text-align: right;
-`
-
 const H2DateAndReadTime = styled.h2`
   font-size: 0.875em;
   font-weight: 100;
   margin-bottom: 0.25rem;
+  margin-top: 4rem;
   & > span::before {
     margin: 0.2rem;
     content: "-";
@@ -86,6 +76,7 @@ const H2Description = styled.h2`
 
 const ArticleMain = styled.article`
   font-size: 1em;
+  margin-bottom: 4rem;
   @media (min-width: 48em) {
     font-size: 1.25em;
   }
@@ -104,22 +95,7 @@ const Post = ({ data: { mdx }, pageContext }) => {
       />
       <TagsMenu />
       <SectionBlog>
-        <NavBlogPosts className="pure-g">
-          <div className="pure-u-1-2">
-            {!!prev && (
-              <Link to={prev.frontmatter.path}>
-                {"< " + prev.frontmatter.title}
-              </Link>
-            )}
-          </div>
-          {!!next && (
-            <DivNext className="pure-u-1-2">
-              <Link to={next.frontmatter.path}>
-                {next.frontmatter.title + " >"}
-              </Link>
-            </DivNext>
-          )}
-        </NavBlogPosts>
+        <BlogPostNav next={next} prev={prev} />
         <H2DateAndReadTime>
           {frontmatterData.date}
           <span>{mdx.timeToRead} min read</span>
@@ -136,6 +112,7 @@ const Post = ({ data: { mdx }, pageContext }) => {
         <ArticleMain>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </ArticleMain>
+        <BlogPostNav next={next} prev={prev} />
       </SectionBlog>
     </Layout>
   )
