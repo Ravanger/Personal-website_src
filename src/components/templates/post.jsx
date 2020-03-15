@@ -38,6 +38,10 @@ const SectionBlog = styled.section`
 
 const NavBlogPosts = styled.nav`
   margin-bottom: 4rem;
+  font-size: 0.875em;
+  @media (min-width: 48em) {
+    font-size: 1em;
+  }
 `
 
 const DivNext = styled.div`
@@ -101,17 +105,15 @@ const Post = ({ data: { mdx }, pageContext }) => {
       <TagsMenu />
       <SectionBlog>
         <NavBlogPosts className="pure-g">
-          {prev && (
-            <div className="pure-u-1-3">
+          <div className="pure-u-1-2">
+            {!!prev && (
               <Link to={prev.frontmatter.path}>
                 {"< " + prev.frontmatter.title}
               </Link>
-            </div>
-          )}
-          <div className="pure-u-1-3"></div>
-          {!prev && <div className="pure-u-1-3"></div>}
-          {next && (
-            <DivNext className="pure-u-1-3">
+            )}
+          </div>
+          {!!next && (
+            <DivNext className="pure-u-1-2">
               <Link to={next.frontmatter.path}>
                 {next.frontmatter.title + " >"}
               </Link>
