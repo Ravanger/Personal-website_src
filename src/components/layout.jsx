@@ -6,6 +6,9 @@ import Header from "./header"
 import Footer from "./footer"
 
 const GlobalStyles = createGlobalStyle`
+  body {
+    overflow-x: hidden;
+  }
   body, a, p, input, textarea, button {
     font-family: 'Roboto', sans-serif !important;
   }
