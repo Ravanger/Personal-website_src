@@ -11,6 +11,7 @@ module.exports = {
     linkedin: `https://www.linkedin.com/in/brossovsky`,
   },
   plugins: [
+    `gatsby-plugin-preact`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-catch-links`,
