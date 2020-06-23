@@ -3,7 +3,6 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import {
   FaEnvelope,
-  FaFacebook,
   FaInstagram,
   FaLinkedin,
   FaGithub,
@@ -17,7 +16,6 @@ const SocialsMenu = () => {
       site {
         siteMetadata {
           email
-          facebook
           instagram
           github
           linkedin
@@ -34,12 +32,6 @@ const SocialsMenu = () => {
         isMail
       >
         <FaEnvelope />
-      </SocialsMenuLink>
-      <SocialsMenuLink
-        url={data.site.siteMetadata.facebook}
-        ariaLabel="Facebook"
-      >
-        <FaFacebook />
       </SocialsMenuLink>
       <SocialsMenuLink
         url={data.site.siteMetadata.instagram}
