@@ -69,7 +69,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Create tag pages
   const tags = result.data.allMdx.group
-  tags.forEach(tag => {
+  tags.forEach((tag) => {
     createPage({
       path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
       component: tagTemplate,
@@ -88,4 +88,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     pathPrefix: "", // path to add to the path generated in the createPagefunc "your_site/your_page_name/2"
     context: {}, // This is optional and defaults to an empty object if not used
   })
+}
+
+// Don't include source maps
+exports.onCreateWebpackConfig = ({ actions, stage }) => {
+  // If production JavaScript and CSS build
+  if (stage === "build-javascript") {
+    // Turn off source maps
+    actions.setWebpackConfig({
+      devtool: false,
+    })
+  }
 }
