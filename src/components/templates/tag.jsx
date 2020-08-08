@@ -29,6 +29,8 @@ export const pageQuery = graphql`
 `
 
 const H1TagHeader = styled.h1`
+  font-size: 1.5rem;
+  font-weight: bold;
   margin-bottom: 2rem;
 `
 

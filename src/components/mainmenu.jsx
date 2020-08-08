@@ -22,6 +22,7 @@ const NavMainMenu = styled.nav`
   position: relative;
   width: 100%;
   font-size: 1.25em;
+  font-weight: bold;
   display: none;
   @media (min-width: 48em) {
     text-align: center;

@@ -26,6 +26,7 @@ const DivBlogPostText = styled.div`
 const H2BlogPostTitle = styled.h2`
   margin-top: 2rem;
   font-size: 1.75em;
+  font-weight: bold;
 `
 
 const PBlogPostExcerpt = styled.p`

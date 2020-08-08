@@ -5,6 +5,7 @@ import styled from "styled-components"
 
 const H1LogoTitle = styled.h1`
   font-size: 2.5em;
+  font-weight: bold;
   line-height: 0.75;
   width: 6em;
 `

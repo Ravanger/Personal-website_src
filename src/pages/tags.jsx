@@ -10,6 +10,8 @@ import SEO from "../components/seo"
 import TagsMenu from "../components/tagsmenu"
 
 const H1TagHeader = styled.h1`
+  font-size: 1.5rem;
+  font-weight: bold;
   margin-bottom: 2rem;
 `
 
@@ -35,7 +37,7 @@ const Tags = () => {
       <TagsMenu />
       <H1TagHeader>Tags</H1TagHeader>
       <ul>
-        {data.allMdx.group.map(tag => (
+        {data.allMdx.group.map((tag) => (
           <LiTagItem key={tag.fieldValue} className="pure-u-1">
             <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
               {tag.fieldValue} ({tag.totalCount})

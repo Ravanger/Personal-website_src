@@ -60,6 +60,7 @@ const LiTagItem = styled.li`
 
 const H1Title = styled.h1`
   font-size: 1.75em;
+  font-weight: bold;
   margin-bottom: 0rem;
   @media (min-width: 48em) {
     font-size: 2.5em;

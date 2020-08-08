@@ -6,6 +6,7 @@ import NavPrevNext from "./navprevnext"
 
 const NavBlogPosts = styled.nav`
   font-size: 0.875em;
+  font-weight: bold;
   @media (min-width: 48em) {
     font-size: 1em;
   }
@@ -15,7 +16,7 @@ const DivNext = styled.div`
   text-align: right;
 `
 
-const BlogPostNav = props => {
+const BlogPostNav = (props) => {
   const prev = props.prev
   const next = props.next
   return (
