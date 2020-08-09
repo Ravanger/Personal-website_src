@@ -1,7 +1,7 @@
 import React from "react"
 
 import { Link, useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 const H1LogoTitle = styled.h1`
   font-size: 2.5em;

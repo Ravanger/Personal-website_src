@@ -2,7 +2,7 @@ import React from "react"
 
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 const LinkAnimated = styled(Link)`
   transition: color 0.4s ease 0s;

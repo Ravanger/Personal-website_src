@@ -1,6 +1,6 @@
 import React from "react"
 
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import SiteLogo from "./sitelogo"
 import MainMenu from "./mainmenu"

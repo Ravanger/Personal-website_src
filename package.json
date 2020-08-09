@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Boris Rossovsky <contact@borisr.dev>",
   "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
     "@mdx-js/mdx": "^1.6.16",
     "@mdx-js/react": "^1.6.16",
     "gatsby": "^2.24.34",
@@ -12,6 +14,7 @@
     "gatsby-paginate": "^1.1.1",
     "gatsby-plugin-canonical-urls": "^2.3.10",
     "gatsby-plugin-catch-links": "^2.3.11",
+    "gatsby-plugin-emotion": "^4.3.10",
     "gatsby-plugin-manifest": "^2.4.22",
     "gatsby-plugin-mdx": "^1.2.34",
     "gatsby-plugin-netlify": "^2.3.12",
@@ -22,7 +25,6 @@
     "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sharp": "^2.6.25",
     "gatsby-plugin-sitemap": "^2.4.11",
-    "gatsby-plugin-styled-components": "^3.3.10",
     "gatsby-remark-copy-linked-files": "^2.3.12",
     "gatsby-remark-embed-video": "^3.0.10",
     "gatsby-remark-images": "^3.3.25",
@@ -36,13 +38,11 @@
     "purecss": "^2.0.3",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
-    "react-icons": "^3.10.0",
-    "styled-components": "^5.1.0",
-    "typescript": "^3.9.7"
+    "react-icons": "^3.10.0"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.11.1",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.7"
   },
   "keywords": [
     "gatsby"

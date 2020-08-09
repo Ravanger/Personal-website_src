@@ -4,7 +4,7 @@ import kebabCase from "lodash/kebabCase"
 import { graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import PropTypes from "prop-types"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import Layout from "../layout"
 import SEO from "../seo"

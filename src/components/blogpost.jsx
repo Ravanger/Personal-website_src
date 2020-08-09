@@ -4,7 +4,7 @@ import kebabCase from "lodash/kebabCase"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import GatsbyImage from "gatsby-image"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 const DivBlogPost = styled.div`
   border-width: 1px;

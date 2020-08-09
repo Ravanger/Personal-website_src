@@ -2,7 +2,7 @@ import React from "react"
 import kebabCase from "lodash/kebabCase"
 
 import { Link, useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 const DivTagsWrapper = styled.div`
   margin: 3rem 0;
@@ -39,7 +39,7 @@ const TagsMenu = () => {
   return (
     <DivTagsWrapper>
       <UlTagsList>
-        {data.allMdx.group.map(tag => (
+        {data.allMdx.group.map((tag) => (
           <LiTagItem key={tag.fieldValue}>
             <Link
               to={`/tags/${kebabCase(tag.fieldValue)}/`}

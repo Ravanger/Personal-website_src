@@ -1,28 +1,38 @@
 import React from "react"
 import PropTypes from "prop-types"
-import styled, { createGlobalStyle } from "styled-components"
+import styled from "@emotion/styled"
+import { Global, css } from "@emotion/core"
 
 import Header from "./header"
 import Footer from "./footer"
 
-const GlobalStyles = createGlobalStyle`
+const GlobalStyles = css`
   body {
     overflow-x: hidden;
   }
-  body, a, p, input, textarea, button {
-    font-family: 'Roboto', sans-serif !important;
+  body,
+  a,
+  p,
+  input,
+  textarea,
+  button {
+    font-family: "Roboto", sans-serif !important;
   }
   a {
     text-decoration: none;
     color: #000000;
-    &:focus, &:hover {
+    &:focus,
+    &:hover {
       color: #5a9c88;
     }
   }
   li {
     display: inline-block;
   }
-  ul, p, h1, h2 {
+  ul,
+  p,
+  h1,
+  h2 {
     margin: 0;
     padding: 0;
   }
@@ -40,7 +50,7 @@ const DivSiteWrapper = styled.div`
 const Layout = ({ children }) => {
   return (
     <>
-      <GlobalStyles />
+      <Global styles={GlobalStyles} />
       <DivSiteWrapper>
         <Header />
         <main>{children}</main>

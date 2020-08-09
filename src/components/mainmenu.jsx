@@ -2,7 +2,7 @@ import React from "react"
 
 import { FaBars } from "react-icons/fa"
 import PropTypes from "prop-types"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 const DivMainMenuWrapper = styled.div`
   text-align: right;
