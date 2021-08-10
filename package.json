@@ -20,7 +20,7 @@
     "gatsby-plugin-netlify": "^2.3.12",
     "gatsby-plugin-offline": "^3.2.22",
     "gatsby-plugin-preact": "^4.0.9",
-    "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sharp": "^2.6.25",
@@ -55,7 +55,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "preload-fonts": "gatsby-preload-fonts"
   },
   "repository": {
     "type": "git",
