@@ -16,38 +16,39 @@ const StyledGatsbyImage = styled(GatsbyImage)`
 `
 
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allInstaNode(sort: { fields: timestamp, order: DESC }) {
-        edges {
-          node {
-            caption
-            id
-            localFile {
-              childImageSharp {
-                fixed(width: 300, height: 300, quality: 70) {
-                  ...GatsbyImageSharpFixed
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+//   const data = useStaticQuery(graphql`
+//     query {
+//       allInstaNode(sort: { fields: timestamp, order: DESC }) {
+//         edges {
+//           node {
+//             caption
+//             id
+//             localFile {
+//               childImageSharp {
+//                 fixed(width: 300, height: 300, quality: 70) {
+//                   ...GatsbyImageSharpFixed
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   `)
 
   return (
     <Layout>
       <SEO title="Visual" description="My Instagram stuff" />
-      <DivGalleryWrapper>
-        {data.allInstaNode.edges.map(({ node: instapic }) => (
-          <StyledGatsbyImage
-            key={instapic.id}
-            alt={instapic.caption}
-            fixed={instapic.localFile.childImageSharp.fixed}
-          />
-        ))}
-      </DivGalleryWrapper>
+    <p>{"https://www.instagram.com/ravanger666/"}</p>
+//       <DivGalleryWrapper>
+//         {data.allInstaNode.edges.map(({ node: instapic }) => (
+//           <StyledGatsbyImage
+//             key={instapic.id}
+//             alt={instapic.caption}
+//             fixed={instapic.localFile.childImageSharp.fixed}
+//           />
+//         ))}
+//       </DivGalleryWrapper>
     </Layout>
   )
 }
