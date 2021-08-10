@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: borisr.dev
+Token: 0295069bd475c676bf86e02300ad1e3f2d2950c7ac8af860dcea321c4d12bbd4
