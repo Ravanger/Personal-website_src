@@ -9,6 +9,7 @@ const IndexPage = ({ pageContext }) => (
   <Layout>
     <SEO title="Home" description="Home is where the house is" />
     <TagsMenu />
+    <p style={{textAlign: "center"}}>{"Website is being redesigned... stay tuned!"}</p>
     <AllBlogPosts pageContext={pageContext} />
   </Layout>
 )
